@@ -7,6 +7,10 @@
     {
       "id": "Seller",
       "isDefault": false
+    },
+    {
+      "id": "Message",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -19,6 +23,9 @@
   },
   "color": "#F1DEFF",
   "icon": "open-new-tab",
+  "unpublishedAppLayout": {
+    "type": "TABLET_LARGE"
+  },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,

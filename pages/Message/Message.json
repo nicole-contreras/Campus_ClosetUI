@@ -1,7 +1,7 @@
 {
   "unpublishedPage": {
-    "name": "Seller",
-    "slug": "seller",
+    "name": "Message",
+    "slug": "message",
     "layouts": [
       {
         "viewMode": false,
@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 480,
+          "bottomRow": 570,
           "containerStyle": "none",
           "snapRows": 77,
           "parentRowSpace": 1,
@@ -25,10 +25,23 @@
           "dynamicBindingPathList": [],
           "leftColumn": 0
         },
-        "layoutOnLoadActions": [],
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Message_get_conversation",
+              "name": "get_conversation",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Table1.selectedRow.buyer_id"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
         "layoutOnLoadActionErrors": [],
         "validOnPageLoadActions": true,
-        "id": "Seller",
+        "id": "Message",
         "deleted": false,
         "policies": [],
         "userPermissions": []
@@ -39,5 +52,5 @@
     "isHidden": false
   },
   "deleted": false,
-  "gitSyncId": "6570386bd205b85ec70318eb_657038c8d205b85ec70318f2"
+  "gitSyncId": "657094c552e06413a9835afc_65709b1d52e06413a9835b0a"
 }

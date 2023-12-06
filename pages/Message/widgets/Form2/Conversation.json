@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 5,
-    "widgetName": "Text1",
+    "widgetName": "Conversation",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -16,6 +16,7 @@
     "animateLoading": true,
     "overflow": "NONE",
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+    "dynamicTriggerPathList": [],
     "leftColumn": 2,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
@@ -24,19 +25,19 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "Form",
+    "text": "Conversation",
     "key": "66eq6maa6g",
     "isDeprecated": false,
     "rightColumn": 26,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
-    "widgetId": "zje2fw10p9",
+    "widgetId": "5zasdb3bdh",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#231F20",
     "version": 1,
-    "parentId": "2vv75itelo",
+    "parentId": "rqse10r7dy",
     "tags": [
         "Suggested",
         "Content"

@@ -76,7 +76,7 @@ def add_message_to_conversation(userIDFrom, userIDTo):
 
 
 @user.route('/<userIDFrom>/conversation', methods=['PUT'])
-def add_message_to_conversation(userIDFrom):
+def start_new_convo(userIDFrom):
     
     # Collecting data from the request object 
     the_data = request.json

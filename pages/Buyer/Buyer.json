@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 550,
+          "bottomRow": 1040,
           "containerStyle": "none",
           "snapRows": 124,
           "parentRowSpace": 1,
@@ -34,6 +34,18 @@
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Buyer_get_conversation",
+              "name": "get_conversation",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "Table1.selectedRow.seller_id"
+              ],
               "timeoutInMillisecond": 10000
             }
           ]

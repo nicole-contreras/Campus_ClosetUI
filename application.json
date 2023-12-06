@@ -7,10 +7,6 @@
     {
       "id": "Seller",
       "isDefault": false
-    },
-    {
-      "id": "Message",
-      "isDefault": false
     }
   ],
   "viewMode": false,

@@ -74,6 +74,43 @@ def add_message_to_conversation(userIDFrom, userIDTo):
     
     return 'Success!'
 
+
+@user.route('/<userIDFrom>/conversation', methods=['PUT'])
+def add_message_to_conversation(userIDFrom):
+    
+    # Collecting data from the request object 
+    the_data = request.json
+    current_app.logger.info(the_data)
+
+    # Extracting the variables
+    userIDTo = the_data.get('to_user_id', '')
+    conversation_history = the_data.get('conversation_history', '')
+
+    # Checking if the conversation already exists, and if not, insert a new one
+    cursor = db.get_db().cursor()
+    cursor.execute(
+        'SELECT * FROM conversation WHERE to_user_id = %s AND from_user_id = %s',
+        (userIDTo, userIDFrom)
+    )
+    existing_conversation = cursor.fetchone()
+
+    if existing_conversation:
+        # Conversation already exists, update the history
+        cursor.execute(
+            'UPDATE conversation SET conversation_history = %s WHERE to_user_id = %s AND from_user_id = %s',
+            (conversation_history, userIDTo, userIDFrom)
+        )
+    else:
+        # Conversation doesn't exist, insert a new one
+        cursor.execute(
+            'INSERT INTO conversation (to_user_id, from_user_id, conversation_history) VALUES (%s, %s, %s)',
+            (userIDTo, userIDFrom, conversation_history)
+        )
+
+    db.get_db().commit()
+
+    return 'Success!'
+
 @user.route('/<sellerID>/additem', methods=['POST'])
 def user_sell_new_item(sellerID):
     

@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{\"User 1 to User 2: \" + conversation_history.text}}",
+      "body": "{{\"User 1 to User 2: \" + conversation_history.text }}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -39,7 +39,7 @@
         }
       ],
       "formData": {
-        "apiContentType": "none"
+        "apiContentType": "application/json"
       }
     },
     "executeOnLoad": false,
@@ -52,7 +52,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\"User 1 to User 2: \" + conversation_history.text"
+      "\"User 1 to User 2: \" + conversation_history.text "
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

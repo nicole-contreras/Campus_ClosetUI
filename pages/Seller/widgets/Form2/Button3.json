@@ -3,7 +3,9 @@
     "boxShadow": "none",
     "mobileBottomRow": 37,
     "widgetName": "Button3",
+    "onClick": "{{add_to_convo.run();\nget_conversation.run()}}",
     "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "dynamicPropertyPathList": [],
     "displayName": "Button",
     "iconSVG": "/static/media/icon.05d209fafeb13a8569e3b4e97069d9ee.svg",
     "searchTags": [
@@ -16,6 +18,7 @@
     "hideCard": false,
     "mobileRightColumn": 62,
     "animateLoading": true,
+    "dynamicTriggerPathList": [{"key": "onClick"}],
     "leftColumn": 52,
     "dynamicBindingPathList": [
         {"key": "buttonColor"},

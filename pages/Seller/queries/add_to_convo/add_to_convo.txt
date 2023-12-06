@@ -1,1 +1,1 @@
-{{"User 1 to User 2: " + conversation_history.text}}
+{{"User 1 to User 2: " + conversation_history.text }}

@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "add_item",
+    "name": "get_conversation",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/u/1/additem"
+        "url": "web:4000/u/1/conversation/2"
       },
       "invalids": [],
       "messages": [],
@@ -29,9 +29,8 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{Form1.data}}",
       "bodyFormData": [],
-      "httpMethod": "POST",
+      "httpMethod": "GET",
       "selfReferencingDataPaths": [],
       "pluginSpecifiedTemplates": [
         {
@@ -42,24 +41,18 @@
         "apiContentType": "application/json"
       }
     },
-    "executeOnLoad": false,
-    "dynamicBindingPathList": [
-      {
-        "key": "body"
-      }
-    ],
+    "executeOnLoad": true,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "Form1.data"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Seller_add_item",
+  "id": "Seller_get_conversation",
   "deleted": false,
-  "gitSyncId": "6570386bd205b85ec70318eb_65703a8fd205b85ec70318f5"
+  "gitSyncId": "6570386bd205b85ec70318eb_65703c93d205b85ec70318fe"
 }

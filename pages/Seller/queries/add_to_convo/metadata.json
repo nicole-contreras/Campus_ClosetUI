@@ -2,12 +2,12 @@
   "pluginType": "API",
   "pluginId": "restapi-plugin",
   "unpublishedAction": {
-    "name": "add_item",
+    "name": "add_to_convo",
     "datasource": {
       "name": "DEFAULT_REST_DATASOURCE",
       "pluginId": "restapi-plugin",
       "datasourceConfiguration": {
-        "url": "web:4000/u/1/additem"
+        "url": "web:4000/u/1/conversation/2"
       },
       "invalids": [],
       "messages": [],
@@ -29,7 +29,7 @@
       ],
       "encodeParamsToggle": true,
       "queryParameters": [],
-      "body": "{{Form1.data}}",
+      "body": "{{\"User 1 to User 2: \" + conversation_history.text}}",
       "bodyFormData": [],
       "httpMethod": "POST",
       "selfReferencingDataPaths": [],
@@ -39,7 +39,7 @@
         }
       ],
       "formData": {
-        "apiContentType": "application/json"
+        "apiContentType": "none"
       }
     },
     "executeOnLoad": false,
@@ -52,14 +52,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "Form1.data"
+      "\"User 1 to User 2: \" + conversation_history.text"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Seller_add_item",
+  "id": "Seller_add_to_convo",
   "deleted": false,
-  "gitSyncId": "6570386bd205b85ec70318eb_65703a8fd205b85ec70318f5"
+  "gitSyncId": "6570386bd205b85ec70318eb_65703d94d205b85ec7031900"
 }

@@ -1,8 +1,12 @@
 {
   "pages": [
     {
-      "id": "Page1",
+      "id": "Buyer",
       "isDefault": true
+    },
+    {
+      "id": "Seller",
+      "isDefault": false
     }
   ],
   "viewMode": false,

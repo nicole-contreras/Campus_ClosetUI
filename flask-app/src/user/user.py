@@ -48,28 +48,6 @@ def get_conversation(userIDFrom, userIDTo):
 
     return jsonify(json_data)
 
-@items.route('/items/<itemID>', methods=['GET'])
-def get_one_item():
-    query = '''
-        SELECT *
-        FROM item
-        WHERE item_id = itemID;
-    '''
-
-    cursor = db.get_db().cursor()
-    cursor.execute(query) # store results in cursor
-
-    column_headers = [x[0] for x in cursor.description]
-
-    json_data = []
-
-    theData = cursor.fetchall()
-
-    for row in theData:
-        json_data.append(dict(zip(column_headers, row)))
-
-    return jsonify(json_data)
-
 @user.route('/add/item', methods=['POST'])
 def user_sell_new_item():
     

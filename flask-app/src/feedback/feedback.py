@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify, make_response, current_app
 import json
-from campusCloset import db
+from src import db
 
 feedback = Blueprint('feedback', __name__, url_prefix='/feedback')
 

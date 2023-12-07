@@ -94,7 +94,7 @@ def delete_item(itemID):
     return the_response
 
 @items.route('/items/<itemID>', methods=['GET'])
-def item_details():
+def item_details(itemID):
     cursor = db.get_db().cursor()
     cursor.execute('SELECT * FROM item WHERE item_id = %s', (itemID,))
 
@@ -109,3 +109,77 @@ def item_details():
     the_response = make_response(jsonify(json_data))
     the_response.mimetype = 'application/json'
     return the_response
+
+
+@items.route('/curations/<bundleid>', methods = ['GET'])
+def view_bundles(bundleid):
+    query = 'SELECT * FROM bundle'
+
+    # Execute the Query
+    cursor = db.get_db().cursor()
+    cursor.execute(query)
+
+    # Fetching the Result
+    row_headers = [x[0] for x in cursor.description]
+    theData = cursor.fetchall()
+
+    json_data = []
+    for row in theData:
+        json_data.append(dict(zip(row_headers, row)))
+
+        the_response = make_response(jsonify(json_data))
+        the_response.mimetype = 'application/json'
+        return the_response
+
+
+@items.route('/curated_bundles', methods=['POST'])
+def create_curated_bundle():
+    # Collect data from the request body
+    data = request.json
+    title = data.get('title')
+    description = data.get('description')
+    cost = data.get('cost')
+    curator_id = data.get('curator_id')
+
+    # Insert the new bundle into the database
+    cursor = db.get_db().cursor()
+    query = '''
+        INSERT INTO bundle (title, description, cost, curator_id)
+        VALUES (%s, %s, %s, %s)
+    '''
+    cursor.execute(query, (title, description, cost, curator_id))
+    db.get_db().commit()
+
+    return jsonify({'message': 'New curated bundle created', 'bundle_id': cursor.lastrowid})
+
+@items.route('/curated_bundles', methods=['GET'])
+def get_curated_bundles():
+    # Retrieve all bundles from the database
+    cursor = db.get_db().cursor()
+    cursor.execute('SELECT * FROM bundle')
+    bundles = cursor.fetchall()
+    column_headers = [x[0] for x in cursor.description]
+
+    # Convert to JSON format
+    json_data = [dict(zip(column_headers, bundle)) for bundle in bundles]
+    return jsonify(json_data)
+
+@items.route('/curated_bundles/<bundle_id>', methods=['PUT'])
+def update_bundle(bundle_id):
+    # Collect data from the request body
+    data = request.json
+    title = data.get('title')
+    description = data.get('description')
+    cost = data.get('cost')
+
+    # Update the bundle in the database
+    cursor = db.get_db().cursor()
+    query = '''
+        UPDATE bundle
+        SET title = %s, description = %s, cost = %s
+        WHERE bundle_id = %s
+    '''
+    cursor.execute(query, (title, description, cost, bundle_id))
+    db.get_db().commit()
+
+    return jsonify({'message': 'Bundle updated successfully'})

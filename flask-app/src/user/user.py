@@ -4,26 +4,25 @@ from src import db
 
 user = Blueprint('user', __name__)
 
-@user.route('/u/<user_id>', methods=['GET'])
-def getUserInfo(userID):
+@user.route('/<user_id>', methods=['GET'])
+def getUserInfo(user_id):
     query = '''
         SELECT *
         FROM user
-        WHERE (user_id = user_id);
+        WHERE user_id = %s;
     '''
-    cursor = db.get_db.cursor()
-    cursor.execute(query) # store results in cursor
+    cursor = db.get_db().cursor()
+    cursor.execute(query, (user_id,))  # store results in cursor
 
     column_headers = [x[0] for x in cursor.description]
-
     json_data = []
 
     theData = cursor.fetchall()
-
     for row in theData:
         json_data.append(dict(zip(column_headers, row)))
 
     return jsonify(json_data)
+
 
 
 
@@ -197,3 +196,4 @@ def remove_wishlist_item(wishlistId, itemID):
 
     the_response.mimetype = 'application/json'
     return the_response
+

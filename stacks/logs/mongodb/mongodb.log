@@ -1,3 +1,0 @@
-{"t":{"$date":"2023-12-07T17:01:22.161Z"},"s":"I",  "c":"CONTROL",  "id":20697,   "ctx":"-","msg":"Renamed existing log file","attr":{"oldLogPath":"/appsmith-stacks/logs/mongodb/db.log","newLogPath":"/appsmith-stacks/logs/mongodb/db.log.2023-12-07T17-01-22"}}
-{"t":{"$date":"2023-12-07T17:07:50.506Z"},"s":"I",  "c":"CONTROL",  "id":20697,   "ctx":"-","msg":"Renamed existing log file","attr":{"oldLogPath":"/appsmith-stacks/logs/mongodb/db.log","newLogPath":"/appsmith-stacks/logs/mongodb/db.log.2023-12-07T17-07-50"}}
-{"t":{"$date":"2023-12-07T17:10:31.311Z"},"s":"I",  "c":"CONTROL",  "id":20697,   "ctx":"-","msg":"Renamed existing log file","attr":{"oldLogPath":"/appsmith-stacks/logs/mongodb/db.log","newLogPath":"/appsmith-stacks/logs/mongodb/db.log.2023-12-07T17-10-31"}}

@@ -1,6 +1,6 @@
 {
     "mobileBottomRow": 5,
-    "widgetName": "item",
+    "widgetName": "Item",
     "displayName": "Text",
     "iconSVG": "/static/media/icon.a47d6d5dbbb718c4dc4b2eb4f218c1b7.svg",
     "searchTags": [
@@ -17,7 +17,7 @@
     "overflow": "NONE",
     "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
     "dynamicTriggerPathList": [],
-    "leftColumn": 1.5,
+    "leftColumn": 1,
     "dynamicBindingPathList": [
         {"key": "truncateButtonColor"},
         {"key": "fontFamily"},
@@ -25,19 +25,19 @@
     ],
     "shouldTruncate": false,
     "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-    "text": "List Item",
-    "key": "rx2wx9s6a7",
+    "text": "Edit Item",
+    "key": "wdg154kw4w",
     "isDeprecated": false,
-    "rightColumn": 25.5,
+    "rightColumn": 63,
     "textAlign": "LEFT",
     "dynamicHeight": "AUTO_HEIGHT",
-    "widgetId": "tls5hjnlqt",
+    "widgetId": "t40krs032j",
     "minWidth": 450,
     "isVisible": true,
     "fontStyle": "BOLD",
     "textColor": "#231F20",
     "version": 1,
-    "parentId": "iq6b1sim41",
+    "parentId": "gkblleh4cn",
     "tags": [
         "Suggested",
         "Content"

@@ -63,6 +63,7 @@
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
     "columnUpdatedAt": 1701985640749,
+    "originalBottomRow": 38,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 35,
     "widgetName": "Table1Copy",
@@ -342,6 +343,7 @@
     "horizontalAlignment": "LEFT",
     "isVisibleSearch": true,
     "responsiveBehavior": "fill",
+    "originalTopRow": 4,
     "mobileLeftColumn": 2,
     "isVisiblePagination": true,
     "verticalAlignment": "CENTER"

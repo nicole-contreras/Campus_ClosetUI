@@ -67,7 +67,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1701985893867,
+    "columnUpdatedAt": 1701988061012,
     "originalBottomRow": 53,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 38,
@@ -85,7 +85,8 @@
     ],
     "dynamicPropertyPathList": [
         {"key": "primaryColumns.EditActions1.isSaveDisabled"},
-        {"key": "primaryColumns.EditActions1.isDiscardDisabled"}
+        {"key": "primaryColumns.EditActions1.isDiscardDisabled"},
+        {"key": "primaryColumns.EditActions1.onSave"}
     ],
     "displayName": "Table",
     "bottomRow": 54,
@@ -94,7 +95,10 @@
     "hideCard": false,
     "mobileRightColumn": 51,
     "parentColumnSpace": 16.015625,
-    "dynamicTriggerPathList": [{"key": "onRowSelected"}],
+    "dynamicTriggerPathList": [
+        {"key": "onRowSelected"},
+        {"key": "primaryColumns.EditActions1.onSave"}
+    ],
     "borderWidth": "1",
     "primaryColumns": {
         "EditActions1": {
@@ -115,6 +119,7 @@
             "isCellVisible": true,
             "isDerived": true,
             "textSize": "0.875rem",
+            "onSave": "{{save_changes.run()}}",
             "discardButtonVariant": "TERTIARY",
             "buttonStyle": "rgb(3, 179, 101)",
             "allowCellWrapping": false,
@@ -122,8 +127,8 @@
             "isDiscardVisible": true,
             "isDiscardDisabled": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( !Table1.updatedRowIndices.includes(currentIndex)))}}",
             "isVisible": true,
-            "label": "Save / Discard",
-            "discardActionLabel": "Discard",
+            "label": "Save Changes",
+            "discardActionLabel": "",
             "columnType": "editActions",
             "thousandSeparator": true,
             "saveActionLabel": "Save",
@@ -135,6 +140,7 @@
             "enableFilter": true,
             "sticky": "right",
             "saveIconAlign": "left",
+            "onDiscard": "{{}}",
             "originalId": "EditActions1",
             "discardBorderRadius": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
             "currencyCode": "USD",
@@ -343,7 +349,7 @@
             "allowCellWrapping": false,
             "index": 5,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "Seller ID",
             "columnType": "number",
             "thousandSeparator": true,

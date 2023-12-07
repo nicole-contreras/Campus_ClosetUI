@@ -13,7 +13,7 @@
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 1360,
+          "bottomRow": 1970,
           "containerStyle": "none",
           "snapRows": 56,
           "parentRowSpace": 1,
@@ -30,6 +30,14 @@
             {
               "id": "Admin_getAdmin",
               "name": "getAdmin",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Admin_get_review",
+              "name": "get_review",
               "confirmBeforeExecute": false,
               "pluginType": "API",
               "jsonPathKeys": [],

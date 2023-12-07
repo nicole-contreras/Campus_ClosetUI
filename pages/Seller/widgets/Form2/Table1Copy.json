@@ -62,7 +62,7 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1701985640749,
+    "columnUpdatedAt": 1701989967381,
     "originalBottomRow": 38,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 35,
@@ -207,7 +207,7 @@
             "allowCellWrapping": false,
             "index": 0,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "bundle_id",
             "fontStyle": "",
             "textColor": "",

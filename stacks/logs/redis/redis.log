@@ -1,0 +1,188 @@
+1789:C 06 Dec 2023 17:25:41.553 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1789:C 06 Dec 2023 17:25:41.553 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1789, just started
+1789:C 06 Dec 2023 17:25:41.553 # Configuration loaded
+1789:M 06 Dec 2023 17:25:41.560 * Running mode=standalone, port=6379.
+1789:M 06 Dec 2023 17:25:41.560 # Server initialized
+1789:M 06 Dec 2023 17:25:41.560 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1789:M 06 Dec 2023 17:25:41.560 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1789:M 06 Dec 2023 17:25:41.563 * Ready to accept connections
+1789:M 06 Dec 2023 17:26:45.746 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:26:45.746 * Background saving started by pid 2134
+2134:C 06 Dec 2023 17:26:45.756 * DB saved on disk
+2134:C 06 Dec 2023 17:26:45.758 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:26:45.848 * Background saving terminated with success
+1789:M 06 Dec 2023 17:32:12.299 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:32:12.307 * Background saving started by pid 2402
+2402:C 06 Dec 2023 17:32:12.348 * DB saved on disk
+2402:C 06 Dec 2023 17:32:12.377 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:32:12.411 * Background saving terminated with success
+1789:M 06 Dec 2023 17:32:28.075 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:32:28.076 * Background saving started by pid 2420
+2420:C 06 Dec 2023 17:32:28.086 * DB saved on disk
+2420:C 06 Dec 2023 17:32:28.087 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:32:28.177 * Background saving terminated with success
+1789:M 06 Dec 2023 17:32:49.601 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:32:49.602 * Background saving started by pid 2445
+2445:C 06 Dec 2023 17:32:49.615 * DB saved on disk
+2445:C 06 Dec 2023 17:32:49.616 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:32:49.703 * Background saving terminated with success
+1789:M 06 Dec 2023 17:33:05.100 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:33:05.101 * Background saving started by pid 2476
+2476:C 06 Dec 2023 17:33:05.115 * DB saved on disk
+2476:C 06 Dec 2023 17:33:05.117 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:33:05.202 * Background saving terminated with success
+1789:M 06 Dec 2023 17:34:07.126 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:34:07.127 * Background saving started by pid 2525
+2525:C 06 Dec 2023 17:34:07.148 * DB saved on disk
+2525:C 06 Dec 2023 17:34:07.149 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:34:07.227 * Background saving terminated with success
+1789:M 06 Dec 2023 17:34:23.060 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:34:23.060 * Background saving started by pid 2545
+2545:C 06 Dec 2023 17:34:23.077 * DB saved on disk
+2545:C 06 Dec 2023 17:34:23.078 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:34:23.161 * Background saving terminated with success
+1789:M 06 Dec 2023 17:34:39.027 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:34:39.028 * Background saving started by pid 2557
+2557:C 06 Dec 2023 17:34:39.070 * DB saved on disk
+2557:C 06 Dec 2023 17:34:39.072 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:34:39.129 * Background saving terminated with success
+1789:M 06 Dec 2023 17:35:13.571 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:35:13.572 * Background saving started by pid 2583
+2583:C 06 Dec 2023 17:35:13.638 * DB saved on disk
+2583:C 06 Dec 2023 17:35:13.639 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:35:13.673 * Background saving terminated with success
+1789:M 06 Dec 2023 17:35:29.082 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:35:29.085 * Background saving started by pid 2596
+2596:C 06 Dec 2023 17:35:29.095 * DB saved on disk
+2596:C 06 Dec 2023 17:35:29.096 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:35:29.187 * Background saving terminated with success
+1789:M 06 Dec 2023 17:36:18.423 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:36:18.424 * Background saving started by pid 2633
+2633:C 06 Dec 2023 17:36:18.736 * DB saved on disk
+2633:C 06 Dec 2023 17:36:18.737 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:36:18.796 * Background saving terminated with success
+1789:M 06 Dec 2023 17:36:34.050 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:36:34.051 * Background saving started by pid 2649
+2649:C 06 Dec 2023 17:36:34.064 * DB saved on disk
+2649:C 06 Dec 2023 17:36:34.065 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:36:34.154 * Background saving terminated with success
+1789:M 06 Dec 2023 17:36:50.048 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:36:50.048 * Background saving started by pid 2662
+2662:C 06 Dec 2023 17:36:50.062 * DB saved on disk
+2662:C 06 Dec 2023 17:36:50.064 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:36:50.149 * Background saving terminated with success
+1789:M 06 Dec 2023 17:37:54.504 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:37:54.504 * Background saving started by pid 2710
+2710:C 06 Dec 2023 17:37:54.537 * DB saved on disk
+2710:C 06 Dec 2023 17:37:54.538 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:37:54.608 * Background saving terminated with success
+1789:M 06 Dec 2023 17:38:10.084 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:38:10.085 * Background saving started by pid 2723
+2723:C 06 Dec 2023 17:38:10.118 * DB saved on disk
+2723:C 06 Dec 2023 17:38:10.121 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:38:10.196 * Background saving terminated with success
+1789:M 06 Dec 2023 17:39:06.210 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:39:06.211 * Background saving started by pid 2771
+2771:C 06 Dec 2023 17:39:06.260 * DB saved on disk
+2771:C 06 Dec 2023 17:39:06.267 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:39:06.312 * Background saving terminated with success
+1789:M 06 Dec 2023 17:43:14.586 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:43:14.721 * Background saving started by pid 2979
+2979:C 06 Dec 2023 17:43:14.779 * DB saved on disk
+2979:C 06 Dec 2023 17:43:14.780 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:43:14.822 * Background saving terminated with success
+1789:M 06 Dec 2023 17:43:30.026 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:43:30.027 * Background saving started by pid 3005
+3005:C 06 Dec 2023 17:43:30.039 * DB saved on disk
+3005:C 06 Dec 2023 17:43:30.041 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:43:30.128 * Background saving terminated with success
+1789:M 06 Dec 2023 17:43:46.001 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:43:46.002 * Background saving started by pid 3019
+3019:C 06 Dec 2023 17:43:46.028 * DB saved on disk
+3019:C 06 Dec 2023 17:43:46.028 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:43:46.102 * Background saving terminated with success
+1789:M 06 Dec 2023 17:45:44.713 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:45:44.713 * Background saving started by pid 3108
+3108:C 06 Dec 2023 17:45:45.004 * DB saved on disk
+3108:C 06 Dec 2023 17:45:45.007 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:45:45.095 * Background saving terminated with success
+1789:M 06 Dec 2023 17:46:01.041 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:46:01.042 * Background saving started by pid 3125
+3125:C 06 Dec 2023 17:46:01.054 * DB saved on disk
+3125:C 06 Dec 2023 17:46:01.055 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:46:01.142 * Background saving terminated with success
+1789:M 06 Dec 2023 17:55:21.003 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:55:21.004 * Background saving started by pid 3563
+3563:C 06 Dec 2023 17:55:21.050 * DB saved on disk
+3563:C 06 Dec 2023 17:55:21.052 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:55:21.105 * Background saving terminated with success
+1789:M 06 Dec 2023 17:55:37.014 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:55:37.015 * Background saving started by pid 3583
+3583:C 06 Dec 2023 17:55:37.026 * DB saved on disk
+3583:C 06 Dec 2023 17:55:37.028 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:55:37.116 * Background saving terminated with success
+1789:M 06 Dec 2023 17:55:53.090 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 17:55:53.091 * Background saving started by pid 3597
+3597:C 06 Dec 2023 17:55:53.102 * DB saved on disk
+3597:C 06 Dec 2023 17:55:53.103 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 17:55:53.192 * Background saving terminated with success
+1789:M 06 Dec 2023 18:06:41.743 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:06:41.747 * Background saving started by pid 4096
+4096:C 06 Dec 2023 18:06:41.774 * DB saved on disk
+4096:C 06 Dec 2023 18:06:41.776 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:06:41.849 * Background saving terminated with success
+1789:M 06 Dec 2023 18:06:57.080 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:06:57.081 * Background saving started by pid 4118
+4118:C 06 Dec 2023 18:06:57.091 * DB saved on disk
+4118:C 06 Dec 2023 18:06:57.092 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:06:57.182 * Background saving terminated with success
+1789:M 06 Dec 2023 18:07:13.068 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:07:13.068 * Background saving started by pid 4133
+4133:C 06 Dec 2023 18:07:13.078 * DB saved on disk
+4133:C 06 Dec 2023 18:07:13.079 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:07:13.169 * Background saving terminated with success
+1789:M 06 Dec 2023 18:08:15.088 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:08:15.090 * Background saving started by pid 4183
+4183:C 06 Dec 2023 18:08:15.134 * DB saved on disk
+4183:C 06 Dec 2023 18:08:15.137 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:08:15.200 * Background saving terminated with success
+1789:M 06 Dec 2023 18:08:31.092 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:08:31.093 * Background saving started by pid 4200
+4200:C 06 Dec 2023 18:08:31.103 * DB saved on disk
+4200:C 06 Dec 2023 18:08:31.104 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:08:31.194 * Background saving terminated with success
+1789:M 06 Dec 2023 18:08:47.024 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:08:47.029 * Background saving started by pid 4213
+4213:C 06 Dec 2023 18:08:47.042 * DB saved on disk
+4213:C 06 Dec 2023 18:08:47.044 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:08:47.130 * Background saving terminated with success
+1789:M 06 Dec 2023 18:09:48.631 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:09:48.631 * Background saving started by pid 4262
+4262:C 06 Dec 2023 18:09:48.665 * DB saved on disk
+4262:C 06 Dec 2023 18:09:48.666 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:09:48.732 * Background saving terminated with success
+1789:M 06 Dec 2023 18:19:05.287 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:19:05.288 * Background saving started by pid 4687
+4687:C 06 Dec 2023 18:19:05.313 * DB saved on disk
+4687:C 06 Dec 2023 18:19:05.317 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:19:05.389 * Background saving terminated with success
+1789:M 06 Dec 2023 18:19:21.010 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 18:19:21.011 * Background saving started by pid 4706
+4706:C 06 Dec 2023 18:19:21.025 * DB saved on disk
+4706:C 06 Dec 2023 18:19:21.026 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 18:19:21.113 * Background saving terminated with success
+1789:M 06 Dec 2023 19:26:47.767 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 19:26:47.767 * Background saving started by pid 7829
+7829:C 06 Dec 2023 19:26:47.782 * DB saved on disk
+7829:C 06 Dec 2023 19:26:47.783 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 19:26:47.867 * Background saving terminated with success
+1789:M 06 Dec 2023 19:27:03.008 * 1 changes in 15 seconds. Saving...
+1789:M 06 Dec 2023 19:27:03.009 * Background saving started by pid 7842
+7842:C 06 Dec 2023 19:27:03.023 * DB saved on disk
+7842:C 06 Dec 2023 19:27:03.025 * RDB: 0 MB of memory used by copy-on-write
+1789:M 06 Dec 2023 19:27:03.109 * Background saving terminated with success
+1789:signal-handler (1701891738) Received SIGTERM scheduling shutdown...
+1789:M 06 Dec 2023 19:42:19.019 # User requested shutdown...
+1789:M 06 Dec 2023 19:42:19.019 * Saving the final RDB snapshot before exiting.
+1789:M 06 Dec 2023 19:42:19.036 * DB saved on disk
+1789:M 06 Dec 2023 19:42:19.036 # Redis is now ready to exit, bye bye...

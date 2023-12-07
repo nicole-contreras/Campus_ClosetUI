@@ -24,7 +24,7 @@
     "needsHeightForContent": true,
     "leftColumn": 0,
     "delimiter": ",",
-    "defaultSelectedRowIndex": 0,
+    "defaultSelectedRowIndex": "0",
     "showInlineEditingOptionDropdown": true,
     "flexVerticalAlignment": "start",
     "accentColor": "{{appsmith.theme.colors.primaryColor}}",
@@ -62,19 +62,19 @@
         }
     },
     "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "columnUpdatedAt": 1701878720734,
+    "columnUpdatedAt": 1701880498308,
     "originalBottomRow": 57,
     "defaultSelectedRowIndices": [0],
     "mobileBottomRow": 38,
     "widgetName": "Table1",
     "defaultPageSize": 0,
     "columnOrder": [
+        "seller_id",
         "bundle_id",
         "buyer_id",
         "category",
         "item_id",
         "price",
-        "seller_id",
         "size"
     ],
     "dynamicPropertyPathList": [],
@@ -85,7 +85,7 @@
     "hideCard": false,
     "mobileRightColumn": 51,
     "parentColumnSpace": 16.015625,
-    "dynamicTriggerPathList": [],
+    "dynamicTriggerPathList": [{"key": "onRowSelected"}],
     "borderWidth": "1",
     "primaryColumns": {
         "size": {
@@ -229,7 +229,7 @@
             "allowCellWrapping": false,
             "index": 1,
             "isDiscardVisible": true,
-            "isVisible": true,
+            "isVisible": false,
             "label": "Buyer ID",
             "columnType": "number",
             "thousandSeparator": true,
@@ -291,7 +291,7 @@
             "allowCellWrapping": false,
             "index": 5,
             "isDiscardVisible": true,
-            "isVisible": false,
+            "isVisible": true,
             "label": "Seller ID",
             "columnType": "number",
             "thousandSeparator": true,
@@ -306,6 +306,7 @@
             "verticalAlignment": "CENTER"
         }
     },
+    "onRowSelected": "{{get_conversation.run()}}",
     "key": "nawoqp4w0t",
     "canFreezeColumn": true,
     "isDeprecated": false,

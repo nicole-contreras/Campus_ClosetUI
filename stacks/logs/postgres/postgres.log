@@ -30,3 +30,21 @@
 2023-12-06 19:42:11.045 UTC [1805] LOG:  background worker "logical replication launcher" (PID 1838) exited with exit code 1
 2023-12-06 19:42:11.045 UTC [1833] LOG:  shutting down
 2023-12-06 19:42:11.277 UTC [1805] LOG:  database system is shut down
+2023-12-07 17:01:21.573 UTC [1489] LOG:  starting PostgreSQL 13.13 (Ubuntu 13.13-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2023-12-07 17:01:21.573 UTC [1489] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-12-07 17:01:21.601 UTC [1489] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-12-07 17:01:21.642 UTC [1507] LOG:  database system was shut down at 2023-12-06 19:42:11 UTC
+2023-12-07 17:01:21.736 UTC [1489] LOG:  database system is ready to accept connections
+2023-12-07 17:07:26.215 UTC [1489] LOG:  received smart shutdown request
+2023-12-07 17:07:26.238 UTC [1489] LOG:  background worker "logical replication launcher" (PID 1516) exited with exit code 1
+2023-12-07 17:07:26.250 UTC [1511] LOG:  shutting down
+2023-12-07 17:07:26.398 UTC [1489] LOG:  database system is shut down
+2023-12-07 17:07:50.764 UTC [1489] LOG:  starting PostgreSQL 13.13 (Ubuntu 13.13-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2023-12-07 17:07:50.764 UTC [1489] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-12-07 17:07:50.794 UTC [1489] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2023-12-07 17:07:50.845 UTC [1507] LOG:  database system was shut down at 2023-12-07 17:07:26 UTC
+2023-12-07 17:07:50.934 UTC [1489] LOG:  database system is ready to accept connections
+2023-12-07 17:09:08.402 UTC [1489] LOG:  received smart shutdown request
+2023-12-07 17:09:08.416 UTC [1489] LOG:  background worker "logical replication launcher" (PID 1519) exited with exit code 1
+2023-12-07 17:09:08.417 UTC [1511] LOG:  shutting down
+2023-12-07 17:09:08.556 UTC [1489] LOG:  database system is shut down

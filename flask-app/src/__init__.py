@@ -32,10 +32,10 @@ def create_app():
     def welcome():
         return "<h1>Welcome to the 3200 boilerplate app</h1>"
 
-    # Import the various Beluprint Objects
+    # Import the various Blueprint Objects
     from src.items.items  import items
     from src.user.user  import user
-    for src.admin.admin import admin
+    from src.admin.admin import admin
 
 
 

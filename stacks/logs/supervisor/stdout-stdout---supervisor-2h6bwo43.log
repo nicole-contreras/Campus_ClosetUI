@@ -1,0 +1,2175 @@
+READY
+RESULT 1252
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:C 07 Dec 2023 17:10:31.200 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1472:C 07 Dec 2023 17:10:31.200 # Redis version=5.0.7, bits=64, commit=00000000, modified=0, pid=1472, just started
+1472:C 07 Dec 2023 17:10:31.200 # Configuration loaded
+1472:M 07 Dec 2023 17:10:31.228 * Running mode=standalone, port=6379.
+1472:M 07 Dec 2023 17:10:31.228 # Server initialized
+1472:M 07 Dec 2023 17:10:31.228 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1472:M 07 Dec 2023 17:10:31.228 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1472:M 07 Dec 2023 17:10:31.311 * DB loaded from disk: 0.074 seconds
+1472:M 07 Dec 2023 17:10:31.311 * Ready to accept connections
+READY
+RESULT 322
+processname:mongodb groupname:mongodb pid:1473 channel:stdout
+{"t":{"$date":"2023-12-07T17:10:31.311Z"},"s":"I",  "c":"CONTROL",  "id":20697,   "ctx":"-","msg":"Renamed existing log file","attr":{"oldLogPath":"/appsmith-stacks/logs/mongodb/db.log","newLogPath":"/appsmith-stacks/logs/mongodb/db.log.2023-12-07T17-10-31"}}
+READY
+RESULT 85
+processname:rts groupname:rts pid:1477 channel:stdout
+Load environment configuration
+READY
+RESULT 93
+processname:backend groupname:backend pid:1478 channel:stdout
+Load environment configuration
+READY
+RESULT 91
+processname:backend groupname:backend pid:1478 channel:stdout
+Waiting for RTS to start ...
+READY
+RESULT 91
+processname:editor groupname:editor pid:1479 channel:stdout
+Load environment configuration
+READY
+RESULT 172
+processname:editor groupname:editor pid:1479 channel:stderr
++ ssl_conf_path=/appsmith-stacks/data/certificate/conf
++ mkdir -pv /appsmith-stacks/data/certificate/conf
++ cat
+READY
+RESULT 66
+processname:editor groupname:editor pid:1479 channel:stderr
++ cat
+READY
+RESULT 80
+processname:editor groupname:editor pid:1479 channel:stderr
++ [[ -z 'self' * ]]
+READY
+RESULT 265
+processname:editor groupname:editor pid:1479 channel:stderr
++ export 'APPSMITH_ALLOWED_FRAME_ANCESTORS='\''self'\'' *'
++ APPSMITH_ALLOWED_FRAME_ANCESTORS=''\''self'\'' *'
++ [[ -z false ]]
++ use_https=0
++ [[ -n '' ]]
++ /opt/appsmith/templates/nginx-app.conf.sh 0 ''
+READY
+RESULT 336
+processname:postgres groupname:postgres pid:1482 channel:stdout
+2023-12-07 17:10:31.871 UTC [1482] LOG:  starting PostgreSQL 13.13 (Ubuntu 13.13-1.pgdg20.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit
+2023-12-07 17:10:31.871 UTC [1482] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+READY
+RESULT 860
+processname:editor groupname:editor pid:1479 channel:stderr
++ cp -r /opt/appsmith/editor/404-image.png /opt/appsmith/editor/404.css /opt/appsmith/editor/404.html /opt/appsmith/editor/asset-manifest.json /opt/appsmith/editor/asset-manifest.json.gz /opt/appsmith/editor/favicon-black.ico /opt/appsmith/editor/index.html /opt/appsmith/editor/index.html.gz /opt/appsmith/editor/libraries /opt/appsmith/editor/manifest.json /opt/appsmith/editor/page.min.js /opt/appsmith/editor/pageService.js /opt/appsmith/editor/pageService.js.LICENSE.txt /opt/appsmith/editor/pageService.js.br /opt/appsmith/editor/pageService.js.gz /opt/appsmith/editor/pageService.js.map /opt/appsmith/editor/pageService.js.map.gz /opt/appsmith/editor/privacy-policy.html /opt/appsmith/editor/static /opt/appsmith/editor/terms-and-conditions.html /opt/appsmith/editor/tinymce /tmp/appsmith/www
+READY
+RESULT 166
+processname:postgres groupname:postgres pid:1482 channel:stdout
+2023-12-07 17:10:31.984 UTC [1482] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+READY
+RESULT 162
+processname:postgres groupname:postgres pid:1482 channel:stdout
+2023-12-07 17:10:32.152 UTC [1522] LOG:  database system was shut down at 2023-12-07 17:09:08 UTC
+READY
+RESULT 152
+processname:postgres groupname:postgres pid:1482 channel:stdout
+2023-12-07 17:10:32.406 UTC [1482] LOG:  database system is ready to accept connections
+READY
+RESULT 91
+processname:backend groupname:backend pid:1478 channel:stdout
+Waiting for RTS to start ...
+READY
+RESULT 107
+processname:rts groupname:rts pid:1477 channel:stdout
+RTS version v1.9.50 running at http://localhost:8091
+READY
+RESULT 503
+processname:editor groupname:editor pid:1479 channel:stderr
++ apply-env-vars /opt/appsmith/editor/index.html /tmp/appsmith/www/index.html
++ original=/opt/appsmith/editor/index.html
++ served=/tmp/appsmith/www/index.html
++ node -e '
+  const fs = require("fs")
+  const content = fs.readFileSync("/opt/appsmith/editor/index.html", "utf8").replace(
+    /\b__(APPSMITH_[A-Z0-9_]+)__\b/g,
+    (placeholder, name) => (process.env[name] || "")
+  )
+  fs.writeFileSync("/tmp/appsmith/www/index.html", content)
+  '
+READY
+RESULT 78
+processname:backend groupname:backend pid:1478 channel:stdout
+{"success":true}READY
+RESULT 75
+processname:backend groupname:backend pid:1478 channel:stdout
+RTS started.
+READY
+RESULT 100
+processname:editor groupname:editor pid:1479 channel:stderr
+++ dirname /tmp/appsmith/www/index.html
+READY
+RESULT 92
+processname:editor groupname:editor pid:1479 channel:stdout
+/tmp/appsmith/www /opt/appsmith
+READY
+RESULT 86
+processname:editor groupname:editor pid:1479 channel:stderr
++ pushd /tmp/appsmith/www
+READY
+RESULT 101
+processname:editor groupname:editor pid:1479 channel:stderr
+++ basename /tmp/appsmith/www/index.html
+READY
+RESULT 93
+processname:editor groupname:editor pid:1479 channel:stderr
++ gzip --keep --force index.html
+READY
+RESULT 74
+processname:editor groupname:editor pid:1479 channel:stdout
+/opt/appsmith
+READY
+RESULT 119
+processname:editor groupname:editor pid:1479 channel:stderr
++ popd
++ exec nginx -g 'daemon off;error_log stderr info;'
+READY
+RESULT 131
+processname:editor groupname:editor pid:1479 channel:stderr
+2023/12/07 17:10:33 [notice] 1479#1479: using the "epoll" event method
+READY
+RESULT 399
+processname:editor groupname:editor pid:1479 channel:stderr
+2023/12/07 17:10:33 [notice] 1479#1479: nginx/1.18.0 (Ubuntu)
+2023/12/07 17:10:33 [notice] 1479#1479: OS: Linux 6.5.11-linuxkit
+2023/12/07 17:10:33 [notice] 1479#1479: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/12/07 17:10:33 [notice] 1479#1479: start worker processes
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1573
+READY
+RESULT 192
+processname:editor groupname:editor pid:1479 channel:stderr
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1574
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1575
+READY
+RESULT 126
+processname:editor groupname:editor pid:1479 channel:stderr
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1576
+READY
+RESULT 115
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: Class path contains multiple SLF4J providers.
+READY
+RESULT 303
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: Found provider [ch.qos.logback.classic.spi.LogbackServiceProvider@4ccabbaa]
+SLF4J: Found provider [org.slf4j.reload4j.Reload4jServiceProvider@4bf558aa]
+SLF4J: See https://www.slf4j.org/codes.html#multiple_bindings for an explanation.
+READY
+RESULT 157
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: Actual provider is of type [ch.qos.logback.classic.spi.LogbackServiceProvider@4ccabbaa]
+READY
+RESULT 235
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:10:42,256]  - Starting ServerApplication vv1.9.50 using Java 17.0.9 with PID 1478 (/opt/appsmith/backend/server.jar started by root in /opt/appsmith/backend)
+READY
+RESULT 139
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:10:42,259]  - Running with Spring Boot v3.0.9, Spring v6.0.11
+READY
+RESULT 139
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:10:42,262]  - The following 1 profile is active: "production"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:10:49 +0000] "GET / HTTP/1.1" 200 2050 "-" "curl/7.68.0"
+READY
+RESULT 275
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:10:51,627]  - Multiple Spring Data modules found, entering strict repository configuration mode
+[2023-12-07 17:10:51,633]  - Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+READY
+RESULT 193
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:10:53,814]  - Finished Spring Data repository scanning in 2144 ms. Found 58 Reactive MongoDB repository interfaces.
+READY
+RESULT 2672
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:04,810]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|reactive-streams|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.5.11-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@3874b815, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7a22a3c2], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@5d7835a8]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@53c68ce], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+READY
+RESULT 732
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:05,323]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=372593572, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000005, setVersion=1, topologyVersion=TopologyVersion{processId=6571fc87bc0f9bc07b201701, counter=6}, lastWriteDate=Thu Dec 07 17:11:02 UTC 2023, lastUpdateTimeNanos=699532455471}
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:11:06 +0000] "GET / HTTP/1.1" 200 2050 "-" "curl/7.68.0"
+READY
+RESULT 2660
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:12,384]  - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.5.11-linuxkit"}, "platform": "Java/Eclipse Adoptium/17.0.9+9"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='appsmith', source='appsmith', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=NettyStreamFactoryFactory{eventLoopGroup=io.netty.channel.nio.NioEventLoopGroup@7ed3df3b, socketChannelClass=class io.netty.channel.socket.nio.NioSocketChannel, allocator=PooledByteBufAllocator(directByDefault: true), sslContext=null}, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7a22a3c2], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@5d7835a8]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@53c68ce], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+READY
+RESULT 731
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:12,421]  - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=42535991, setName='mr1', canonicalAddress=localhost:27017, hosts=[localhost:27017], passives=[], arbiters=[], primary='localhost:27017', tagSet=TagSet{[]}, electionId=7fffffff0000000000000005, setVersion=1, topologyVersion=TopologyVersion{processId=6571fc87bc0f9bc07b201701, counter=6}, lastWriteDate=Thu Dec 07 17:11:02 UTC 2023, lastUpdateTimeNanos=706645111083}
+READY
+RESULT 111
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:15,959]  - Enabled plugins: []
+READY
+RESULT 182
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:15,965]  - Disabled plugins: []
+[2023-12-07 17:11:15,981]  - PF4J version 3.10.0 in 'deployment' mode
+READY
+RESULT 138
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,626]  - Plugin 'postgres-plugin@1.0-SNAPSHOT' resolved
+READY
+RESULT 1557
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,626]  - Plugin 'saas-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,626]  - Plugin 'snowflake-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,627]  - Plugin 'elasticsearch-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,627]  - Plugin 'mssql-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,627]  - Plugin 'redshift-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,627]  - Plugin 'google-sheets-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,627]  - Plugin 'mongo-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,627]  - Plugin 'graphql-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'js-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'oracle-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'smtp-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'amazons3-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'mysql-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'openai-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'dynamo-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'arangodb-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'restapi-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,628]  - Plugin 'redis-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,629]  - Plugin 'firestore-plugin@1.0-SNAPSHOT' resolved
+[2023-12-07 17:11:16,629]  - Start plugin 'postgres-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 205
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,669]  - Start plugin 'saas-plugin@1.0-SNAPSHOT'
+[2023-12-07 17:11:16,675]  - Start plugin 'snowflake-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 140
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,740]  - Start plugin 'elasticsearch-plugin@1.0-SNAPSHOT'
+READY
+RESULT 132
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,747]  - Start plugin 'mssql-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,788]  - Start plugin 'redshift-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 140
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,815]  - Start plugin 'google-sheets-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 132
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,950]  - Start plugin 'mongo-plugin@1.0-SNAPSHOT'
+READY
+RESULT 134
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,960]  - Start plugin 'graphql-plugin@1.0-SNAPSHOT'
+READY
+RESULT 129
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,965]  - Start plugin 'js-plugin@1.0-SNAPSHOT'
+READY
+RESULT 133
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,968]  - Start plugin 'oracle-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 131
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:16,993]  - Start plugin 'smtp-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:17,023]  - Start plugin 'amazons3-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 132
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:17,069]  - Start plugin 'mysql-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 133
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:17,136]  - Start plugin 'openai-plugin@1.0-SNAPSHOT'
+READY
+RESULT 542
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 133
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:17,152]  - Start plugin 'dynamo-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 135
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:17,178]  - Start plugin 'arangodb-plugin@1.0-SNAPSHOT'
+READY
+RESULT 134
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:17,184]  - Start plugin 'restapi-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 686
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:17,230]  - Start plugin 'redis-plugin@1.0-SNAPSHOT'
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+[2023-12-07 17:11:17,246]  - Start plugin 'firestore-plugin@1.0-SNAPSHOT'
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 217
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: ch.qos.logback.classic.spi.LogbackServiceProvider not a subtype
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+SLF4J: A SLF4J service provider failed to instantiate:
+org.slf4j.spi.SLF4JServiceProvider: org.slf4j.reload4j.Reload4jServiceProvider not a subtype
+SLF4J: No SLF4J providers were found.
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:11:22 +0000] "GET / HTTP/1.1" 200 2050 "-" "curl/7.68.0"
+READY
+RESULT 239
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:24,642]  - Autowired annotation is not supported on static fields: public static final int com.appsmith.server.helpers.GitFileUtils.INDEX_LOCK_FILE_STALE_TIME
+READY
+RESULT 131
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:28,050]  - Mongock runner COMMUNITY version[5.1.6]
+READY
+RESULT 124
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:28,051]  - Running Mongock with NO metadata
+READY
+RESULT 416
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:28,056]  - Property transaction-enabled not provided. It will become true as default in next versions. Set explicit value to false in case transaction are not desired.
+[2023-12-07 17:11:28,066]  - Property transaction-enabled not provided and is unknown if driver is transactionable. BY DEFAULT MONGOCK WILL RUN IN NO-TRANSACTION MODE.
+READY
+RESULT 162
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:28,260]  - Reflections took 145 ms to scan 1 urls, producing 5 keys and 43 values
+READY
+RESULT 161
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:28,351]  - Reflections took 40 ms to scan 1 urls, producing 5 keys and 43 values
+READY
+RESULT 126
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,018]  - Mongock trying to acquire the lock
+READY
+RESULT 153
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,114]  - Mongock acquired the lock until: Thu Dec 07 17:12:29 UTC 2023
+READY
+RESULT 123
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,117]  - Starting mongock lock daemon...
+READY
+RESULT 177
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,199]  - Mongock starting the data migration sequence id[2023-12-07T17:11:28.041209469-169]...
+READY
+RESULT 239
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,208]  - PASSED OVER - {"id"="initialize-schema-version", "type"="execution", "author"="", "class"="DatabaseChangelog0", "method"="initializeSchemaVersion"}
+READY
+RESULT 2644
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,209]  - PASSED OVER - {"id"="initial-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="initialPlugins"}
+[2023-12-07 17:11:29,210]  - PASSED OVER - {"id"="remove-org-name-index", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="removeOrgNameIndex"}
+[2023-12-07 17:11:29,210]  - PASSED OVER - {"id"="initial-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addInitialIndexes"}
+[2023-12-07 17:11:29,210]  - PASSED OVER - {"id"="application-deleted-at", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addApplicationDeletedAtFieldAndIndex"}
+[2023-12-07 17:11:29,210]  - PASSED OVER - {"id"="hide-rapidapi-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="hideRapidApiPluginFromCreateDatasource"}
+[2023-12-07 17:11:29,210]  - PASSED OVER - {"id"="datasource-deleted-at", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addDatasourceDeletedAtFieldAndIndex"}
+[2023-12-07 17:11:29,211]  - PASSED OVER - {"id"="page-deleted-at", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addPageDeletedAtFieldAndIndex"}
+[2023-12-07 17:11:29,211]  - PASSED OVER - {"id"="friendly-plugin-names", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setFriendlyPluginNames"}
+[2023-12-07 17:11:29,211]  - PASSED OVER - {"id"="add-delete-datasource-perm-existing-groups", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addDeleteDatasourcePermToExistingGroups"}
+[2023-12-07 17:11:29,211]  - PASSED OVER - {"id"="install-default-plugins-to-all-organizations", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="installDefaultPluginsToAllOrganizations"}
+[2023-12-07 17:11:29,211]  - PASSED OVER - {"id"="ensure-datasource-created-and-updated-at-fields", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="ensureDatasourceCreatedAndUpdatedAt"}
+[2023-12-07 17:11:29,212]  - PASSED OVER - {"id"="add-index-for-sequence-name", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addIndexForSequenceName"}
+[2023-12-07 17:11:29,212]  - PASSED OVER - {"id"="set-initial-sequence-for-datasource", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setInitialSequenceForDatasource"}
+[2023-12-07 17:11:29,212]  - PASSED OVER - {"id"="set-plugin-image-and-docs-link", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setPluginImageAndDocsLink"}
+READY
+RESULT 4593
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,213]  - PASSED OVER - {"id"="fix-double-escapes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="fixDoubleEscapes"}
+[2023-12-07 17:11:29,213]  - PASSED OVER - {"id"="encrypt-password", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="encryptPassword"}
+[2023-12-07 17:11:29,213]  - PASSED OVER - {"id"="install-mysql-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="mysqlPlugin"}
+[2023-12-07 17:11:29,213]  - PASSED OVER - {"id"="update-database-documentation-links", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="execute-action-for-read-action", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="giveExecutePermissionToReadActionUsers"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="invite-and-public-permissions", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="giveInvitePermissionToOrganizationsAndPublicPermissionsToApplications"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="generate-unique-id-for-instance", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="generateUniqueIdForInstance"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="fix-password-reset-token-expiration", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="fixTokenExpiration"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="add-elastic-search-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addElasticSearchPlugin"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="add-dynamo-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addDynamoPlugin"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="use-png-logos", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="usePngLogos"}
+[2023-12-07 17:11:29,214]  - PASSED OVER - {"id"="add-redis-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedisPlugin"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="add-msSql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addMsSqlPlugin"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="createNewPageIndexAfterDroppingNewPage", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageIndexAfterDroppingNewPage"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="createNewActionIndexAfterDroppingNewAction", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewActionIndexAfterDroppingNewAction"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="migrate-page-and-actions", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migratePage"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="new-page-new-action-add-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewPageAndNewActionNewIndexes"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="new-action-add-index-pageId", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addNewActionIndexForPageId"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="update-action-index-to-single-multiple-indices", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateActionIndexToSingleMultipleIndices"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="add-firestore-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addFirestorePlugin"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="ensure-app-icons-and-colors", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="ensureAppIconsAndColors"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="update-authentication-type", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateAuthenticationTypes"}
+[2023-12-07 17:11:29,215]  - PASSED OVER - {"id"="add-isSendSessionEnabled-key-for-datasources", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addIsSendSessionEnabledPropertyInDatasources"}
+[2023-12-07 17:11:29,216]  - PASSED OVER - {"id"="add-redshift-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addRedshiftPlugin"}
+[2023-12-07 17:11:29,216]  - PASSED OVER - {"id"="clear-userdata-collection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="clearUserDataCollection"}
+READY
+RESULT 11414
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,216]  - PASSED OVER - {"id"="update-database-documentation-links-v1-2-1", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateDatabaseDocumentationLinks_v1_2_1"}
+[2023-12-07 17:11:29,216]  - PASSED OVER - {"id"="add-amazons3-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addAmazonS3Plugin"}
+[2023-12-07 17:11:29,216]  - PASSED OVER - {"id"="add-app-viewer-invite-policy", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addAppViewerInvitePolicy"}
+[2023-12-07 17:11:29,217]  - PASSED OVER - {"id"="update-plugin-datasource-form-components", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginDatasourceFormComponents"}
+[2023-12-07 17:11:29,217]  - PASSED OVER - {"id"="update-database-encode-params-toggle", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateEncodeParamsToggle"}
+[2023-12-07 17:11:29,217]  - PASSED OVER - {"id"="update-postgres-plugin-preparedStatement-config", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePostgresActionsSetPreparedStatementConfiguration"}
+[2023-12-07 17:11:29,217]  - PASSED OVER - {"id"="fix-dynamicBindingPathListForActions", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="fixDynamicBindingPathListForExistingActions"}
+[2023-12-07 17:11:29,217]  - PASSED OVER - {"id"="update-database-action-configuration-timeout", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateActionConfigurationTimeout"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="update-s3-datasource-configuration-and-label", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateS3DatasourceConfigurationAndLabel"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="change-applayout-type-definition", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="changeAppLayoutTypeDefinition"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="update-mysql-postgres-mongo-ssl-mode", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateMysqlPostgresMongoSslMode"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="add-commenting-permissions", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addCommentingPermissions"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="add-google-sheets-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addGoogleSheetsPlugin"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="mark-instance-unregistered", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markInstanceAsUnregistered"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="create-entry-in-sequence-per-organization-for-datasource", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createEntryInSequencePerOrganizationForDatasource"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="migrate-smartSubstitution-dataType", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateSmartSubstitutionDataTypeBoolean"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="update-mongo-import-from-srv-field", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateMongoImportFromSrvField"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="delete-mongo-datasource-structures", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="deleteMongoDatasourceStructures"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="set-mongo-actions-type-to-raw", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setMongoActionInputToRaw"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="update-firestore-where-conditions-data", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateFirestoreWhereConditionsData"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="add-application-export-permissions", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addApplicationExportPermissions"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="add-snowflake-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSnowflakePlugin"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="mongo-form-merge-update-commands", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateUpdateOneToUpdateManyMongoFormCommand"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="ensure-user-created-and-updated-at-fields", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="ensureUserCreatedAndUpdatedAt"}
+[2023-12-07 17:11:29,218]  - PASSED OVER - {"id"="add-and-update-order-for-all-pages", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addOrderToAllPagesOfApplication"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="mongo-form-migrate-raw", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateRawInputTypeToRawCommand"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="add-arangodb-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addArangoDBPlugin"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="set-svg-logo-to-plugins", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setSvgLogoToPluginIcons"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="remove-order-field-from-application- pages", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="removePageOrderFieldFromApplicationPages"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="create-plugin-reference-for-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForGenerateCRUDPage"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="encrypt-certificate", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="encryptCertificateAndPassword"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="create-plugin-reference-for-S3-GSheet-genarate-CRUD-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createPluginReferenceForS3AndGSheetGenerateCRUDPage"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="application-git-metadata", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addApplicationGitMetadataFieldAndIndex"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="add-js-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addJSPlugin"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="update-google-sheet-plugin-smartSubstitution-config", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateGoogleSheetActionsSetSmartSubstitutionConfiguration"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="uninstall-mongo-uqi-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="uninstallMongoUqiPluginAndRemoveAllActions"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="migrate-mongo-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateMongoPluginToUqi"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="migrate-mongo-uqi-dynamicBindingPathList", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateMongoPluginDynamicBindingListUqi"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="update-plugin-package-name-index", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updatePluginPackageNameIndexToPluginNamePackageNameAndVersion"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="delete-orphan-actions", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="deleteOrphanActions"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="migrate-old-app-color-to-new-colors", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateOldAppColorsToNewColors"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="update-s3-permanent-url-toggle-default-value", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateS3PermanentUrlToggleDefaultValue"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="application-git-metadata-index", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateGitApplicationMetadataIndex"}
+[2023-12-07 17:11:29,219]  - PASSED OVER - {"id"="migrate-s3-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateS3PluginToUqi"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="set-slug-to-application-and-page", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setSlugToApplicationAndPage"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="update-list-widget-trigger-paths", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="removeUnusedTriggerPathsListWidget"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="update-s3-action-configuration-for-type", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateS3ActionConfigurationBodyForContentTypeSupport"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="fix-ispublic-is-false-for-public-apps", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="fixIsPublicIsSetFalseWhenAppIsPublic"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="update-js-action-client-side-execution", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateJsActionsClientSideExecution"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="add-smtp-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addSmtpPluginPlugin"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="update-mockdb-endpoint", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateMockdbEndpoint"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="add-google-sheets-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addPluginNameForGoogleSheets"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="insert-default-resources", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="insertDefaultResources"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="flush-spring-redis-keys", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="clearRedisCache"}
+[2023-12-07 17:11:29,220]  - PASSED OVER - {"id"="migrate-firestore-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi"}
+[2023-12-07 17:11:29,221]  - PASSED OVER - {"id"="migrate-firestore-to-uqi-2", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi2"}
+[2023-12-07 17:11:29,221]  - PASSED OVER - {"id"="migrate-firestore-pagination-data", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePaginationData"}
+[2023-12-07 17:11:29,221]  - PASSED OVER - {"id"="update-mongodb-mockdb-endpoint", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateMongoMockdbEndpoint"}
+[2023-12-07 17:11:29,222]  - PASSED OVER - {"id"="migrate-firestore-to-uqi-3", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFirestorePluginToUqi3"}
+READY
+RESULT 4025
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,223]  - PASSED OVER - {"id"="create-system-themes", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createSystemThemes"}
+[2023-12-07 17:11:29,223]  - PASSED OVER - {"id"="add-limit-field-data-to-mongo-aggregate-cmd", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="addLimitFieldDataToMongoAggregateCommand"}
+[2023-12-07 17:11:29,223]  - PASSED OVER - {"id"="update-index-for-git", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateGitIndexes"}
+[2023-12-07 17:11:29,223]  - PASSED OVER - {"id"="update-mockdb-endpoint-2", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateMockdbEndpoint2"}
+[2023-12-07 17:11:29,223]  - PASSED OVER - {"id"="migrate-from-RSA-SHA1-to-ECDSA-SHA2-protocol-for-key-generation", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="migrateFromRSASha1ToECDSASha2Protocol"}
+[2023-12-07 17:11:29,224]  - PASSED OVER - {"id"="use-assets-cdn-for-plugin-icons", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="useAssetsCDNForPluginIcons"}
+[2023-12-07 17:11:29,224]  - PASSED OVER - {"id"="update-index-for-newAction-actionCollection-userData", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionAndUserDataIndexes"}
+[2023-12-07 17:11:29,224]  - PASSED OVER - {"id"="mark-mssql-crud-unavailable", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="markMSSQLCrudUnavailable"}
+[2023-12-07 17:11:29,224]  - PASSED OVER - {"id"="update-index-for-newAction-actionCollection", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="updateNewActionActionCollectionIndexes"}
+[2023-12-07 17:11:29,224]  - PASSED OVER - {"id"="create-system-themes-v2", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="createSystemThemes2"}
+[2023-12-07 17:11:29,224]  - PASSED OVER - {"id"="set-firestore-smart-substitution-to-false-for-old-cmds", "type"="execution", "author"="", "class"="DatabaseChangelog1", "method"="setFirestoreSmartSubstitutionToFalseForOldCommands"}
+[2023-12-07 17:11:29,227]  - PASSED OVER - {"id"="fix-plugin-title-casing", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="fixPluginTitleCasing"}
+[2023-12-07 17:11:29,228]  - PASSED OVER - {"id"="deprecate-archivedAt-in-action", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="deprecateArchivedAtForNewAction"}
+[2023-12-07 17:11:29,229]  - PASSED OVER - {"id"="update-form-data-for-uqi-mode", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateActionFormDataPath"}
+[2023-12-07 17:11:29,230]  - PASSED OVER - {"id"="add-isConfigured-flag-for-all-datasources", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateIsConfiguredFlagForAllTheExistingDatasources"}
+[2023-12-07 17:11:29,230]  - PASSED OVER - {"id"="set-application-version", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="setDefaultApplicationVersion"}
+[2023-12-07 17:11:29,230]  - PASSED OVER - {"id"="delete-orphan-pages", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="deleteOrphanPages"}
+[2023-12-07 17:11:29,230]  - PASSED OVER - {"id"="update-git-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndexesForGit"}
+[2023-12-07 17:11:29,230]  - PASSED OVER - {"id"="update-organization-slugs", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateOrganizationSlugs"}
+[2023-12-07 17:11:29,230]  - PASSED OVER - {"id"="copy-organization-to-workspaces", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="copyOrganizationToWorkspaces"}
+[2023-12-07 17:11:29,230]  - PASSED OVER - {"id"="add-workspace-indexes", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addWorkspaceIndexes"}
+READY
+RESULT 630
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,242]  - PASSED OVER - {"id"="update-sequence-names-from-organization-to-workspace", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateSequenceNamesFromOrganizationToWorkspace"}
+[2023-12-07 17:11:29,243]  - PASSED OVER - {"id"="add-default-tenant", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addDefaultTenant"}
+[2023-12-07 17:11:29,244]  - PASSED OVER - {"id"="add-tenant-to-all-workspaces", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addTenantToWorkspaces"}
+READY
+RESULT 3326
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,275]  - PASSED OVER - {"id"="add-tenant-to-all-users-and-flush-redis", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addTenantToUsersAndFlushRedis"}
+[2023-12-07 17:11:29,275]  - PASSED OVER - {"id"="migrate-organizationId-to-workspaceId-in-domain-objects", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="migrateOrganizationIdToWorkspaceIdInDomainObjects"}
+[2023-12-07 17:11:29,275]  - PASSED OVER - {"id"="organization-to-workspace-indexes-recreate", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="organizationToWorkspaceIndexesRecreate"}
+[2023-12-07 17:11:29,275]  - PASSED OVER - {"id"="migrate-permission-in-user", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="migratePermissionsInUser"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="migrate-permission-in-workspace", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="migratePermissionsInWorkspace"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="migrate-organizationId-to-workspaceId-in-newaction-datasource", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="migrateOrganizationIdToWorkspaceIdInNewActionDatasource"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="migrate-google-sheets-to-uqi", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="migrateGoogleSheetsToUqi"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="flush-spring-redis-keys-2a", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="clearRedisCache2"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="fix-deleted-themes-when-git-branch-deleted", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="fixDeletedThemesWhenGitBranchDeleted"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="add-anonymousUser", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUser"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="add-default-permission-groups", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addDefaultPermissionGroups"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="mark-public-apps", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="markPublicApps"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="mark-workspaces-for-inheritance", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="markWorkspacesForInheritance"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="inherit-policies-to-every-child-object", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="inheritPoliciesToEveryChildObject"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="make-applications-public", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="makeApplicationsPublic"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="add-instance-config-object", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addInstanceConfigurationPlaceHolder"}
+[2023-12-07 17:11:29,276]  - PASSED OVER - {"id"="add-anonymous-user-permission-group", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addAnonymousUserPermissionGroup"}
+READY
+RESULT 189
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:29,400]  - method[createSystemThemes3] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 3165
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,402]  - RE-APPLIED - {"id"="create-system-themes-v3", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="createSystemThemes3"}
+[2023-12-07 17:11:31,402]  - PASSED OVER - {"id"="update-bad-theme-state", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateBadThemeState"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="migrate-public-apps-single-pg", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="migratePublicAppsSinglePg"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="add-tenant-admin-permissions-instance-admin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addTenantAdminPermissionsToInstanceAdmin"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="add-graphql-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addGraphQLPlugin"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="install-graphql-plugin-to-remaining-workspaces", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="reInstallGraphQLPluginToWorkspaces"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="indices-recommended-by-mongodb-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addIndicesRecommendedByMongoCloud"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="delete-rapid-api-plugin-related-items", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="deleteRapidApiPluginRelatedItems"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="add-unique-index-for-uidstring", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addUniqueIndexOnUidString"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="change-readPermissionGroup-to-readPermissionGroupMembers", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="modifyReadPermissionGroupToReadPermissionGroupMembers"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="remove-preferred-ssl-mode-from-mysql", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="changeSSLModeFromPreferredToDefaultForMySQLPlugin"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="delete-permissions-in-permissionGroups", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="deletePermissionsInPermissionGroups"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="remove-usage-pulses-for-appsmith-cloud", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="removeUsagePulsesForAppsmithCloud"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="add-ssl-mode-settings-for-existing-mssql-datasources", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addSslModeSettingsForExistingMssqlDatasource"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="add-oracle-plugin", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addOraclePlugin"}
+[2023-12-07 17:11:31,403]  - PASSED OVER - {"id"="update-oracle-plugin-name", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateOraclePluginName"}
+READY
+RESULT 333
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,420]  - method[updateSuperUsers] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.repositories.CacheableRepositoryHelper, com.appsmith.server.solutions.PolicySolution, com.appsmith.server.acl.PolicyGenerator]
+READY
+RESULT 421
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,873]  - RE-APPLIED - {"id"="update-super-users", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="updateSuperUsers"}
+[2023-12-07 17:11:31,873]  - PASSED OVER - {"id"="create-indices-on-permissions-for-performance", "type"="execution", "author"="", "class"="DatabaseChangelog2", "method"="addPermissionGroupIndex"}
+READY
+RESULT 255
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,894]  - method[com.appsmith.server.migrations.db.ce.Migration003AddInstanceNameToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 328
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,905]  - PASSED OVER - {"id"="add-instance-name-env-variable-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration003AddInstanceNameToTenantConfiguration", "method"="addInstanceNameEnvVarToTenantConfiguration"}
+READY
+RESULT 516
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,913]  - method[com.appsmith.server.migrations.db.ce.Migration004PermissionGroupDefaultWorkspaceIdMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:31,915]  - PASSED OVER - {"id"="migrate-default-workspace-id-to-default-domain-id", "type"="execution", "author"="default_author", "class"="Migration004PermissionGroupDefaultWorkspaceIdMigration", "method"="defaultWorkspaceIdMigration"}
+READY
+RESULT 524
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,927]  - method[com.appsmith.server.migrations.db.ce.Migration005CreateIndexForApplicationSnapshotMigration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:31,928]  - PASSED OVER - {"id"="create-index-for-application-snapshot-collection", "type"="execution", "author"="default_author", "class"="Migration005CreateIndexForApplicationSnapshotMigration", "method"="addIndexOnApplicationIdAndChunkOrder"}
+READY
+RESULT 248
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,949]  - method[com.appsmith.server.migrations.db.ce.Migration006ResetOnPageLoadEdgesInLayouts] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 279
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,950]  - PASSED OVER - {"id"="reset-on-page-load-edges-in-layouts", "type"="execution", "author"="default_author", "class"="Migration006ResetOnPageLoadEdgesInLayouts", "method"="executeMigration"}
+READY
+RESULT 252
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,958]  - method[com.appsmith.server.migrations.db.ce.Migration007OptOutUnsupportedPluginsForAirGap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 316
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,959]  - PASSED OVER - {"id"="opt-out-unsupported-plugins-airgap-instance", "type"="execution", "author"="default_author", "class"="Migration007OptOutUnsupportedPluginsForAirGap", "method"="optOutUnsupportedPluginsForAirGapInstance"}
+READY
+RESULT 251
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,969]  - method[com.appsmith.server.migrations.db.ce.Migration008SupportNonHostedPluginsForAirgap] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 1075
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:31,969]  - PASSED OVER - {"id"="support-non-self-hosted-plugins-for-airgap", "type"="execution", "author"="default_author", "class"="Migration008SupportNonHostedPluginsForAirgap", "method"="supportNonHostedPluginsForAirgap"}
+[2023-12-07 17:11:31,985]  - method[com.appsmith.server.migrations.db.ce.Migration009UpdateOracleLogoToSVG] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:31,985]  - PASSED OVER - {"id"="update-oracle-logo-to-svg", "type"="execution", "author"="default_author", "class"="Migration009UpdateOracleLogoToSVG", "method"="updateOracleLogoToSVG"}
+[2023-12-07 17:11:32,001]  - method[com.appsmith.server.migrations.db.ce.Migration010UpdatePluginDocsLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,005]  - PASSED OVER - {"id"="update-plugins-docs-link", "type"="execution", "author"="default_author", "class"="Migration010UpdatePluginDocsLink", "method"="updatePluginDocumentationLinks"}
+READY
+RESULT 625
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,016]  - method[com.appsmith.server.migrations.db.ce.Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,024]  - PASSED OVER - {"id"="create-index-default-domain-id-default-domain-type", "type"="execution", "author"="default_author", "class"="Migration011CreateIndexDefaultDomainIdDefaultDomainTypeDropIndexDefaultWorkspaceId", "method"="createNewIndexDefaultDomainIdDefaultDomainTypeAndDropOldIndexDefaultWorkspaceId"}
+READY
+RESULT 309
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,078]  - method[com.appsmith.server.migrations.db.ce.Migration012RemoveStructureFromWithinDatasource] with arguments: [org.springframework.data.mongodb.core.MongoOperations, org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,080]  - PASSED OVER - {"id"="remove-structure-from-within-datasource-modified", "type"="execution", "author"="default_author", "class"="Migration012RemoveStructureFromWithinDatasource", "method"="executeMigration"}
+READY
+RESULT 456
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,137]  - method[com.appsmith.server.migrations.db.ce.Migration013AddEmailBodyTypeToSMTPPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,138]  - PASSED OVER - {"id"="add-smtp-email-body-type", "type"="execution", "author"="default_author", "class"="Migration013AddEmailBodyTypeToSMTPPlugin", "method"="addSmtpEmailBodyType"}
+READY
+RESULT 246
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,143]  - method[com.appsmith.server.migrations.db.ce.Migration014AddIndexToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 284
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,146]  - PASSED OVER - {"id"="index-for-datasource-storage", "type"="execution", "author"="default_author", "class"="Migration014AddIndexToDatasourceStorage", "method"="addingIndexToDatasourceStorage"}
+READY
+RESULT 258
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,163]  - method[com.appsmith.server.migrations.db.ce.Migration015AddPluginTypeIndexToNewActionCollection] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 299
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,178]  - PASSED OVER - {"id"="app-id-plugin-type-index-for-new-action", "type"="execution", "author"="default_author", "class"="Migration015AddPluginTypeIndexToNewActionCollection", "method"="addingIndexToNewAction"}
+READY
+RESULT 245
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,210]  - method[com.appsmith.server.migrations.db.ce.Migration016RenameIndexesWithLongNames] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 271
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,210]  - PASSED OVER - {"id"="rename-indexes-with-long-names", "type"="execution", "author"="default_author", "class"="Migration016RenameIndexesWithLongNames", "method"="executeMigration"}
+READY
+RESULT 248
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,222]  - method[com.appsmith.server.migrations.db.ce.Migration017UnsetEncryptionVersion2Fields] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 291
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,277]  - PASSED OVER - {"id"="unset-not-encrypted-encryption-version-2-fields", "type"="execution", "author"="default_author", "class"="Migration017UnsetEncryptionVersion2Fields", "method"="executeMigration"}
+READY
+RESULT 477
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,287]  - method[com.appsmith.server.migrations.db.ce.Migration018UpdateOraclePluginDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,288]  - PASSED OVER - {"id"="update-oracle-doc-link", "type"="execution", "author"="default_author", "class"="Migration018UpdateOraclePluginDocumentationLink", "method"="updateOracleDocumentationLink"}
+READY
+RESULT 488
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,291]  - method[com.appsmith.server.migrations.db.ce.Migration019RemoveNullEnvIdDatasourceStructureDocuments] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,293]  - PASSED OVER - {"id"="delete-null-envId-key-document", "type"="execution", "author"="default_author", "class"="Migration019RemoveNullEnvIdDatasourceStructureDocuments", "method"="executeMigration"}
+READY
+RESULT 541
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,343]  - method[com.appsmith.server.migrations.db.ce.Migration021MoveGoogleMapsKeyToTenantConfiguration] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig]
+[2023-12-07 17:11:32,344]  - PASSED OVER - {"id"="move-google-maps-key-to-tenant-configuration", "type"="execution", "author"="default_author", "class"="Migration021MoveGoogleMapsKeyToTenantConfiguration", "method"="executeMigration"}
+READY
+RESULT 914
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,348]  - method[com.appsmith.server.migrations.db.ce.Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,351]  - PASSED OVER - {"id"="add-connection-method-default-value-for-mysql", "type"="execution", "author"="default_author", "class"="Migration022AddConnectionMethodDefaultValueToAllMySQLDatasources", "method"="updateConnectionMethodDefaultValueForMySQL"}
+[2023-12-07 17:11:32,354]  - method[com.appsmith.server.migrations.db.ce.Migration023UpdateJSPluginIcon] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,355]  - PASSED OVER - {"id"="update-js-plugin-icon", "type"="execution", "author"="default_author", "class"="Migration023UpdateJSPluginIcon", "method"="executeMigration"}
+READY
+RESULT 916
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,371]  - method[com.appsmith.server.migrations.db.ce.Migration024EnableGenerateCRUDPageToggleForMssqlPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,371]  - PASSED OVER - {"id"="enable-generate-crud-page-for-mssql", "type"="execution", "author"="default_author", "class"="Migration024EnableGenerateCRUDPageToggleForMssqlPlugin", "method"="enableGenerateCRUDPageToggle"}
+[2023-12-07 17:11:32,387]  - method[com.appsmith.server.migrations.db.ce.Migration025AddIndexDeletedInApplication] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,388]  - PASSED OVER - {"id"="add-index-application-deleted", "type"="execution", "author"="default_author", "class"="Migration025AddIndexDeletedInApplication", "method"="createIndexInApplicationCollection"}
+READY
+RESULT 263
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,398]  - method[com.appsmith.server.migrations.db.ce.Migration025RemoveUnassignPermissionFromUnnecessaryRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 317
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,400]  - PASSED OVER - {"id"="remove-unassign-permission-from-workspace-dev-viewer-roles", "type"="execution", "author"="default_author", "class"="Migration025RemoveUnassignPermissionFromUnnecessaryRoles", "method"="executeMigration"}
+READY
+RESULT 489
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,415]  - method[com.appsmith.server.migrations.db.ce.Migration026AddIndexTenantAndDeletedInWorkspace] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,420]  - PASSED OVER - {"id"="add-index-workspace-tenant-deleted", "type"="execution", "author"="default_author", "class"="Migration026AddIndexTenantAndDeletedInWorkspace", "method"="addIndexInWorkspaceCollection"}
+READY
+RESULT 257
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,430]  - method[com.appsmith.server.migrations.db.ce.Migration027AddIndexDatasourceIdAndDeletedInAction] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 305
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,480]  - PASSED OVER - {"id"="new-action-compound-index-datasource-id", "type"="execution", "author"="default_author", "class"="Migration027AddIndexDatasourceIdAndDeletedInAction", "method"="addIndexInNewActionCollection"}
+READY
+RESULT 270
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,497]  - method[com.appsmith.server.migrations.db.ce.Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 361
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,497]  - PASSED OVER - {"id"="tag-user-management-roles-without-default-domain-type-and-id", "type"="execution", "author"="default_author", "class"="Migration028TagUserManagementRolesWithoutDefaultDomainTypeAndId", "method"="tagUserManagementRolesWithoutDefaultDomainTypeAndId"}
+READY
+RESULT 539
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,510]  - method[com.appsmith.server.migrations.db.ce.Migration029PopulateDefaultDomainIdInUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,511]  - PASSED OVER - {"id"="populate-default-domain-id-in-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration029PopulateDefaultDomainIdInUserManagementRoles", "method"="populateDefaultDomainIdInUserManagementRoles"}
+READY
+RESULT 494
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,528]  - method[com.appsmith.server.migrations.db.ce.Migration030TagUsersWithNoUserManagementRoles] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,530]  - PASSED OVER - {"id"="tag-users-with-no-user-management-roles", "type"="execution", "author"="default_author", "class"="Migration030TagUsersWithNoUserManagementRoles", "method"="tagUsersWithNoUserManagementRoles"}
+READY
+RESULT 309
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,544]  - method[com.appsmith.server.migrations.db.ce.Migration031CreateUserManagementRolesForUsersTaggedIn030] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.solutions.PolicySolution]
+READY
+RESULT 358
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,554]  - PASSED OVER - {"id"="create-user-management-roles-for-users-tagged-in-migration-030", "type"="execution", "author"="default_author", "class"="Migration031CreateUserManagementRolesForUsersTaggedIn030", "method"="createUserManagementRolesForUsersTaggedInMigration030"}
+READY
+RESULT 256
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,560]  - method[com.appsmith.server.migrations.db.ce.Migration032AddingXmlParserToApplicationLibraries] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+READY
+RESULT 306
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,577]  - PASSED OVER - {"id"="add-xml-parser-to-application-jslibs", "type"="execution", "author"="default_author", "class"="Migration032AddingXmlParserToApplicationLibraries", "method"="addXmlParserEntryToEachApplication"}
+READY
+RESULT 871
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,587]  - method[com.appsmith.server.migrations.db.ce.Migration033AddOpenAIPlugin] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,588]  - PASSED OVER - {"id"="add-open-ai-plugin", "type"="execution", "author"="default_author", "class"="Migration033AddOpenAIPlugin", "method"="addPluginToDbAndWorkspace"}
+[2023-12-07 17:11:32,591]  - method[com.appsmith.server.migrations.db.ce.Migration034ChangeOpenAIIntegrationDocumentationLink] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,593]  - PASSED OVER - {"id"="change-open-ai-integration-documentation-link", "type"="execution", "author"="default_author", "class"="Migration034ChangeOpenAIIntegrationDocumentationLink", "method"="changeDocumentationLink"}
+READY
+RESULT 1157
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,631]  - method[com.appsmith.server.migrations.db.ce.Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance] with arguments: [org.springframework.data.mongodb.core.MongoTemplate, com.appsmith.server.configurations.CommonConfig, com.appsmith.server.solutions.EnvManager]
+[2023-12-07 17:11:32,640]  - PASSED OVER - {"id"="remove-mockdb-endpoint-in-datasource-self-hosted-instance", "type"="execution", "author"="default_author", "class"="Migration035RemoveMockDbEndPointInDatasourceInSelfHostedInstance", "method"="removeMockDbEndpointInDatasource"}
+[2023-12-07 17:11:32,646]  - method[com.appsmith.server.migrations.db.ce.Migration020TransferToDatasourceStorage] with arguments: [org.springframework.data.mongodb.core.MongoTemplate]
+[2023-12-07 17:11:32,647]  - PASSED OVER - {"id"="migrate-configurations-to-data-storage-v2", "type"="execution", "author"="default_author", "class"="Migration020TransferToDatasourceStorage", "method"="executeMigration"}
+[2023-12-07 17:11:32,647]  - Mongock releasing the lock
+[2023-12-07 17:11:32,647]  - Mongock releasing the lock
+READY
+RESULT 167
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:32,713]  - Mongock released the lock
+[2023-12-07 17:11:32,714]  - Mongock has finished
+READY
+RESULT 144
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:38,307]  - Exposing 2 endpoint(s) beneath base path '/actuator'
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:11:38 +0000] "GET / HTTP/1.1" 200 2050 "-" "curl/7.68.0"
+READY
+RESULT 118
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:39,505]  - Netty started on port 8080
+READY
+RESULT 163
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:39,560]  - Started ServerApplication in 61.03 seconds (process running for 65.805)
+READY
+RESULT 139
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:39,603]  - Performing RTS health check of this instance...
+READY
+RESULT 203
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:39,645]  - In memory cache miss for anonymous user permission groups. Fetching from DB and adding it to in memory storage.
+READY
+RESULT 146
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:39,824]  - Fetched and set conenncted mongo db version as: 5.0.23
+READY
+RESULT 256
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:40 +0000] "GET / HTTP/1.1" 200 2616 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 118
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:41,412]  - RTS health check succeeded
+READY
+RESULT 2385
+processname:backend groupname:backend pid:1478 channel:stdout
+
+ █████╗ ██████╗ ██████╗ ███████╗███╗   ███╗██╗████████╗██╗  ██╗    ██╗███████╗    ██████╗ ██╗   ██╗███╗   ██╗███╗   ██╗██╗███╗   ██╗ ██████╗ ██╗
+██╔══██╗██╔══██╗██╔══██╗██╔════╝████╗ ████║██║╚══██╔══╝██║  ██║    ██║██╔════╝    ██╔══██╗██║   ██║████╗  ██║████╗  ██║██║████╗  ██║██╔════╝ ██║
+███████║██████╔╝██████╔╝███████╗██╔████╔██║██║   ██║   ███████║    ██║███████╗    ██████╔╝██║   ██║██╔██╗ ██║██╔██╗ ██║██║██╔██╗ ██║██║  ███╗██║
+██╔══██║██╔═══╝ ██╔═══╝ ╚════██║██║╚██╔╝██║██║   ██║   ██╔══██║    ██║╚════██║    ██╔══██╗██║   ██║██║╚██╗██║██║╚██╗██║██║██║╚██╗██║██║   ██║╚═╝
+██║  ██║██║     ██║     ███████║██║ ╚═╝ ██║██║   ██║   ██║  ██║    ██║███████║    ██║  ██║╚██████╔╝██║ ╚████║██║ ╚████║██║██║ ╚████║╚██████╔╝██╗
+╚═╝  ╚═╝╚═╝     ╚═╝     ╚══════╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝    ╚═╝╚══════╝    ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝  ╚═══╝╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝
+
+Please open http://localhost:<port> in your browser to experience Appsmith!
+
+READY
+RESULT 141
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:41,471]  - License verification completed with status: valid
+READY
+RESULT 354
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:43,642] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=5e4edac2-b5fe-4728-8e86-9bfd8e03ccbe - Cache entry evicted for key featureFlag:8aff2b14dfad01f59b97b6a68566aecb0bf6176d5cd25abbfc251749e38c6227
+READY
+RESULT 127
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:11:43.663 * 1 changes in 15 seconds. Saving...
+READY
+RESULT 130
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:11:43.665 * Background saving started by pid 1819
+READY
+RESULT 109
+processname:redis groupname:redis pid:1472 channel:stdout
+1819:C 07 Dec 2023 17:11:43.697 * DB saved on disk
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1819:C 07 Dec 2023 17:11:43.698 * RDB: 0 MB of memory used by copy-on-write
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:11:43.765 * Background saving terminated with success
+READY
+RESULT 345
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:43,841] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=5e4edac2-b5fe-4728-8e86-9bfd8e03ccbe - Cache miss for key featureFlag:8aff2b14dfad01f59b97b6a68566aecb0bf6176d5cd25abbfc251749e38c6227
+READY
+RESULT 301
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:43 +0000] "GET /api/v1/product-alert/alert HTTP/1.1" 200 99 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 298
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:44 +0000] "GET /api/v1/tenants/current HTTP/1.1" 200 294 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 291
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:44 +0000] "GET /api/v1/users/me HTTP/1.1" 200 341 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 345
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:44,796] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-1, requestId=5e4edac2-b5fe-4728-8e86-9bfd8e03ccbe - Cache entry added for key featureFlag:8aff2b14dfad01f59b97b6a68566aecb0bf6176d5cd25abbfc251749e38c6227
+READY
+RESULT 297
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:44 +0000] "GET /api/v1/users/features HTTP/1.1" 200 830 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 300
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:45,451] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=7cc4141e-1059-4d9c-97b6-d9290975de26 - Going to get all applications grouped by workspace
+READY
+RESULT 306
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:45 +0000] "GET /pageService.js HTTP/1.1" 200 22741 "http://localhost:8080/pageService.js" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 312
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:47 +0000] "GET /api/v1/applications/new HTTP/1.1" 200 1825 "http://localhost:8080/applications" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 284
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:47,420] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=089246cb-7898-4a0b-af96-59816137790f - Going to get version release items
+READY
+RESULT 321
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:47 +0000] "GET /api/v1/applications/releaseItems HTTP/1.1" 200 9694 "http://localhost:8080/applications" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 121
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:49,288]  - Cancelled mongock lock daemon
+READY
+RESULT 128
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:49,555]  - Fetching features for default tenant
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:11:53 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 360
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:56 +0000] "GET /api/v1/users/me HTTP/1.1" 200 341 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 366
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:56,611] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-3, requestId=1eeed5ce-e142-4b1c-826b-e9b8f397508c - Going to fetch applicationPageDTO for applicationId: null, pageId: 6570b2b11fe0f33e39413a00, branchName: master, mode: EDIT
+READY
+RESULT 320
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:56,992] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-3, requestId=1eeed5ce-e142-4b1c-826b-e9b8f397508c - Retrieved possible application ids for page, picking the appropriate one now
+READY
+RESULT 301
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:57,390] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-3, requestId=1eeed5ce-e142-4b1c-826b-e9b8f397508c - Fetched application data for id: 6570b2a41fe0f33e394139fc
+READY
+RESULT 858
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:57,484] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-3, requestId=35cd1eae-2fd5-40c1-80dd-73b8d20f2f63 - Handling user document changes User(name=John Doe, email=jagj08@gmail.com, hashedEmail=8aff2b14dfad01f59b97b6a68566aecb0bf6176d5cd25abbfc251749e38c6227, roles=null, password=$2a$10$V8oScF80z992OR3n4H7lTefgLn.iYVy3qPgmJtEJ29FfkTzJXdNIy, passwordResetInitiated=false, source=FORM, state=ACTIVATED, isEnabled=true, emailVerificationRequired=false, emailVerified=null, currentOrganizationId=null, currentWorkspaceId=null, organizationIds=null, workspaceIds=null, examplesOrganizationId=null, examplesWorkspaceId=null, groupIds=[], permissions=[], inviteToken=null, isAnonymous=false, tenantId=6570aec91fe0f33e394139cf)
+READY
+RESULT 317
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:57,572] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-3, requestId=35cd1eae-2fd5-40c1-80dd-73b8d20f2f63 - Updating name in userRoles of workspace for user 6570b0411fe0f33e394139e5
+READY
+RESULT 275
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:57,642] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-5, requestId=1eeed5ce-e142-4b1c-826b-e9b8f397508c - Retrieved Page DTOs from DB ...
+READY
+RESULT 278
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:57,651] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-5, requestId=1eeed5ce-e142-4b1c-826b-e9b8f397508c - Populating applicationPagesDTO ...
+READY
+RESULT 399
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:57 +0000] "GET /api/v1/pages?pageId=6570b2b11fe0f33e39413a00&mode=EDIT HTTP/1.1" 200 746 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 133
+processname:rts groupname:rts pid:1477 channel:stdout
+ns:/# socket 7PpElIN2cUZpl9AbAAAB joined the room app:6570b2a41fe0f33e394139fc
+READY
+RESULT 369
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:58,025] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=d832ee9e-bf82-4a89-88e4-9910ee02122e - Going to get all unpublished action collections with params: {applicationId=[6570b2a41fe0f33e394139fc]}, branch: master
+READY
+RESULT 346
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:58,203] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=f568f4f1-e7e1-4dae-9eaa-59b0fcb7b80d - Going to get all actions with params: {applicationId=[6570b2a41fe0f33e394139fc]}, branch: master
+READY
+RESULT 363
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "POST /api/v1/usage-pulse HTTP/1.1" 201 76 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 383
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "GET /api/v1/pages/6570b2b11fe0f33e39413a00 HTTP/1.1" 200 4514 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 131
+processname:rts groupname:rts pid:1477 channel:stdout
+ns:/# socket 7PpElIN2cUZpl9AbAAAB left the room app:6570b2a41fe0f33e394139fc
+READY
+RESULT 133
+processname:rts groupname:rts pid:1477 channel:stdout
+ns:/# socket 7PpElIN2cUZpl9AbAAAB joined the room app:6570b2a41fe0f33e394139fc
+READY
+RESULT 346
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:58,407] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=0b13267b-7bcd-4a72-ac16-063074e2c3bc - Going to get all unpublished JS libs in application: 6570b2a41fe0f33e394139fc, on branch: master
+READY
+RESULT 410
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "GET /api/v1/collections/actions?applicationId=6570b2a41fe0f33e394139fc HTTP/1.1" 200 101 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 415
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "GET /api/v1/themes/applications/6570b2a41fe0f33e394139fc/current?mode=EDIT HTTP/1.1" 200 1459 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 333
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:58,679] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=5ef09481-036b-432d-85b9-95ec24f14a01 - Going to get snapshot with application id: 6570b2a41fe0f33e394139fc, branch: master
+READY
+RESULT 397
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "GET /api/v1/themes/applications/6570b2a41fe0f33e394139fc HTTP/1.1" 200 5274 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 398
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "GET /api/v1/applications/snapshot/6570b2a41fe0f33e394139fc HTTP/1.1" 200 129 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 386
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "GET /api/v1/libraries/6570b2a41fe0f33e394139fc HTTP/1.1" 200 101 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 395
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:58 +0000] "GET /api/v1/workspaces/6570b0d11fe0f33e394139f2/members HTTP/1.1" 200 305 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 199
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:11:59.091 * 1 changes in 15 seconds. Saving...
+1472:M 07 Dec 2023 17:11:59.091 * Background saving started by pid 1853
+READY
+RESULT 109
+processname:redis groupname:redis pid:1472 channel:stdout
+1853:C 07 Dec 2023 17:11:59.115 * DB saved on disk
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1853:C 07 Dec 2023 17:11:59.119 * RDB: 0 MB of memory used by copy-on-write
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:11:59.192 * Background saving terminated with success
+READY
+RESULT 399
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:11:59 +0000] "GET /api/v1/actions?applicationId=6570b2a41fe0f33e394139fc HTTP/1.1" 200 1124 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 338
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:11:59,741] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Going to get all resources from base controller {workspaceId=[6570b0d11fe0f33e394139f2]}
+READY
+RESULT 342
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,137] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Fetching plugins by params: {workspaceId=[6570b0d11fe0f33e394139f2]} for org: Untitled workspace 1
+READY
+RESULT 344
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,207] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=5f0540bc-409d-45f5-9dcb-1232f2441bfa - Going to get all resources from datasource controller {workspaceId=[6570b0d11fe0f33e394139f2]}
+READY
+RESULT 301
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,220] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin restapi-plugin
+READY
+RESULT 307
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,275] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin elasticsearch-plugin
+READY
+RESULT 300
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,294] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin dynamo-plugin
+READY
+RESULT 299
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,305] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin redis-plugin
+READY
+RESULT 303
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,321] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin firestore-plugin
+READY
+RESULT 302
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,323] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin redshift-plugin
+READY
+RESULT 302
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,333] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin amazons3-plugin
+READY
+RESULT 307
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,339] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin google-sheets-plugin
+READY
+RESULT 296
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,357] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin js-plugin
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,361] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin smtp-plugin
+READY
+RESULT 301
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,371] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin graphql-plugin
+READY
+RESULT 300
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,388] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin openai-plugin
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,401] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin saas-plugin
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,412] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin saas-plugin
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:00,418] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=a6fc9057-cfda-456d-9ff8-6c26abf1ab26 - Error loading templates metadata in plugin saas-plugin
+READY
+RESULT 383
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:00 +0000] "GET /api/v1/pages/6570b2b11fe0f33e39413a00 HTTP/1.1" 200 4514 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 369
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:00 +0000] "GET /api/v1/datasources/mocks HTTP/1.1" 200 202 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 398
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:00 +0000] "GET /api/v1/plugins?workspaceId=6570b0d11fe0f33e394139f2 HTTP/1.1" 200 23967 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 400
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:00 +0000] "GET /api/v1/datasources?workspaceId=6570b0d11fe0f33e394139f2 HTTP/1.1" 200 101 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 383
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:00 +0000] "GET /api/v1/pages/6570b2b11fe0f33e394139ff HTTP/1.1" 200 5305 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 390
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:00 +0000] "GET /api/v1/plugins/6570aec01fe0f33e394139bc/form HTTP/1.1" 200 1031 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 390
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:00 +0000] "GET /api/v1/plugins/6570aecb1fe0f33e394139de/form HTTP/1.1" 200 1974 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 333
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:01,023] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Going to get status for default application 6570b2a41fe0f33e394139fc, branch master
+READY
+RESULT 384
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:01,044] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-6, requestId=c60c4f6c-6f76-4706-aaeb-93dc9b76697e - [nioEventLoopGroup-3-6]Execute Action called in Page 6570b2b11fe0f33e39413a00, for action id : 6570b2b11fe0f33e39413a02  action name : items
+READY
+RESULT 358
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:01,076] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-6, requestId=c60c4f6c-6f76-4706-aaeb-93dc9b76697e - This is a dry run or an embedded datasourceStorage. The datasourceStorage context would not exist in this scenario
+READY
+RESULT 315
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:01,199] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=f50e060c-6142-4991-a73b-b7c9f88d1ff9 - Going to get branch list for application 6570b2a41fe0f33e394139fc
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:01,240] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=c60c4f6c-6f76-4706-aaeb-93dc9b76697e - Datasource context doesn't exist. Creating connection.
+READY
+RESULT 355
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:01,326] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-2, requestId=f50e060c-6142-4991-a73b-b7c9f88d1ff9 - boundedElastic-2: Get branches for the application 6570b0d11fe0f33e394139f2/6570b2a41fe0f33e394139fc/Campus_ClosetUI
+READY
+RESULT 401
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:01 +0000] "GET /api/v1/git/branch/app/6570b2a41fe0f33e394139fc/protected HTTP/1.1" 200 101 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 169
+processname:backend groupname:backend pid:1478 channel:stdout
+org.springframework.web.reactive.function.client.WebClientRequestException: web: Name or service not known
+READY
+RESULT 208
+processname:backend groupname:backend pid:1478 channel:stdout
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+READY
+RESULT 309
+processname:backend groupname:backend pid:1478 channel:stdout
+	Suppressed: The stacktrace has been enhanced by Reactor, refer to additional information below: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to GET http://web:4000/i/items [DefaultWebClient]
+Original Stack Trace:
+READY
+RESULT 351
+processname:backend groupname:backend pid:1478 channel:stdout
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+READY
+RESULT 1222
+processname:backend groupname:backend pid:1478 channel:stdout
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:204)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124)
+READY
+RESULT 449
+processname:backend groupname:backend pid:1478 channel:stdout
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:225)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:274)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+READY
+RESULT 165
+processname:backend groupname:backend pid:1478 channel:stdout
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121)
+READY
+RESULT 156
+processname:backend groupname:backend pid:1478 channel:stdout
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+READY
+RESULT 3817
+processname:backend groupname:backend pid:1478 channel:stdout
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:326)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerError(FluxConcatMapNoPrefetch.java:297)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onError(FluxConcatMap.java:875)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:206)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:53)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:471)
+		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:615)
+		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:603)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:336)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1717)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:192)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:311)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:162)
+		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:475)
+		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:433)
+		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:560)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+READY
+RESULT 1463
+processname:backend groupname:backend pid:1478 channel:stdout
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise._subscribe(TransportConnector.java:638)
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise.lambda$subscribe$0(TransportConnector.java:550)
+		at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+		at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+		at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:403)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+READY
+RESULT 2461
+processname:backend groupname:backend pid:1478 channel:stdout
+Caused by: java.net.UnknownHostException: web: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at io.netty.util.internal.SocketUtils$9.run(SocketUtils.java:169)
+	at io.netty.util.internal.SocketUtils$9.run(SocketUtils.java:166)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at io.netty.util.internal.SocketUtils.allAddressesByName(SocketUtils.java:166)
+	at com.appsmith.util.WebClientUtils$NameResolver.doResolveAll(WebClientUtils.java:146)
+	at io.netty.resolver.SimpleNameResolver.resolveAll(SimpleNameResolver.java:79)
+	at io.netty.resolver.SimpleNameResolver.resolveAll(SimpleNameResolver.java:71)
+	at io.netty.resolver.InetSocketAddressResolver.doResolveAll(InetSocketAddressResolver.java:73)
+	at io.netty.resolver.InetSocketAddressResolver.doResolveAll(InetSocketAddressResolver.java:31)
+	at io.netty.resolver.AbstractAddressResolver.resolveAll(AbstractAddressResolver.java:158)
+	at reactor.netty.transport.TransportConnector.doResolveAndConnect(TransportConnector.java:335)
+	at reactor.netty.transport.TransportConnector.lambda$connect$6(TransportConnector.java:165)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:132)
+	at reactor.netty.transport.TransportConnector$MonoChannelPromise._subscribe(TransportConnector.java:638)
+	at reactor.netty.transport.TransportConnector$MonoChannelPromise.lambda$subscribe$0(TransportConnector.java:550)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:403)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+READY
+RESULT 554
+processname:backend groupname:backend pid:1478 channel:stdout
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2023-12-07 17:12:01,698] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-4, requestId=c60c4f6c-6f76-4706-aaeb-93dc9b76697e - reactor-http-epoll-4: Action items with id 6570b2b11fe0f33e39413a02 execution time : 642 ms
+READY
+RESULT 368
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:01 +0000] "POST /api/v1/actions/execute HTTP/1.1" 200 476 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 392
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:02 +0000] "GET /api/v1/git/branch/app/6570b2a41fe0f33e394139fc? HTTP/1.1" 200 158 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 325
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:02,392] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=89a18560-b642-4882-b4d8-4363c53cd14c - Going to get resource from base controller for id: 6570b0d11fe0f33e394139f2
+READY
+RESULT 373
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:02 +0000] "GET /api/v1/plugins/default/icons HTTP/1.1" 200 830 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 387
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:02 +0000] "GET /api/v1/workspaces/6570b0d11fe0f33e394139f2 HTTP/1.1" 200 537 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 374
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:02 +0000] "GET /api/v1/app-templates/filters HTTP/1.1" 200 1065 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 325
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:02,816] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=lettuce-epollEventLoop-10-1, requestId=dd4d403c-1192-4717-b194-27a67686bb28 - Going to get resource from base controller for id: 6570b0d11fe0f33e394139f2
+READY
+RESULT 387
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:03 +0000] "GET /api/v1/workspaces/6570b0d11fe0f33e394139f2 HTTP/1.1" 200 537 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 395
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:05,297] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=eec03d3e-0fb3-444c-90f1-05b3b545027c - [nioEventLoopGroup-3-7]Execute Action called in Page 6570b2b11fe0f33e39413a00, for action id : 6570b2b11fe0f33e39413a06  action name : get_conversation
+READY
+RESULT 358
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:05,315] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=eec03d3e-0fb3-444c-90f1-05b3b545027c - This is a dry run or an embedded datasourceStorage. The datasourceStorage context would not exist in this scenario
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:05,501] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=eec03d3e-0fb3-444c-90f1-05b3b545027c - Datasource context doesn't exist. Creating connection.
+READY
+RESULT 288
+processname:backend groupname:backend pid:1478 channel:stdout
+org.springframework.web.reactive.function.client.WebClientRequestException: web
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+READY
+RESULT 10128
+processname:backend groupname:backend pid:1478 channel:stdout
+	Suppressed: The stacktrace has been enhanced by Reactor, refer to additional information below: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to GET http://web:4000/u/1/conversation/null [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:204)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:225)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:274)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:326)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerError(FluxConcatMapNoPrefetch.java:297)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onError(FluxConcatMap.java:875)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:206)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:53)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:471)
+		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:615)
+		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:603)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:336)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1717)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:192)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:311)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:162)
+		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:475)
+		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:433)
+		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:560)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise._subscribe(TransportConnector.java:638)
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise.lambda$subscribe$0(TransportConnector.java:550)
+		at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+		at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+		at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:403)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.UnknownHostException: web
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:801)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at io.netty.util.internal.SocketUtils$9.run(SocketUtils.java:169)
+	at io.netty.util.internal.SocketUtils$9.run(SocketUtils.java:166)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at io.netty.util.internal.SocketUtils.allAddressesByName(SocketUtils.java:166)
+	at com.appsmith.util.WebClientUtils$NameResolver.doResolveAll(WebClientUtils.java:146)
+	at io.netty.resolver.SimpleNameResolver.resolveAll(SimpleNameResolver.java:79)
+	at io.netty.resolver.SimpleNameResolver.resolveAll(SimpleNameResolver.java:71)
+	at io.netty.resolver.InetSocketAddressResolver.doResolveAll(InetSocketAddressResolver.java:73)
+	at io.netty.resolver.InetSocketAddressResolver.doResolveAll(InetSocketAddressResolver.java:31)
+	at io.netty.resolver.AbstractAddressResolver.resolveAll(AbstractAddressResolver.java:158)
+	at reactor.netty.transport.TransportConnector.doResolveAndConnect(TransportConnector.java:335)
+	at reactor.netty.transport.TransportConnector.lambda$connect$6(TransportConnector.java:165)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:132)
+	at reactor.netty.transport.TransportConnector$MonoChannelPromise._subscribe(TransportConnector.java:638)
+	at reactor.netty.transport.TransportConnector$MonoChannelPromise.lambda$subscribe$0(TransportConnector.java:550)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:403)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2023-12-07 17:12:06,120] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-2, requestId=eec03d3e-0fb3-444c-90f1-05b3b545027c - reactor-http-epoll-2: Action get_conversation with id 6570b2b11fe0f33e39413a06 execution time : 822 ms
+READY
+RESULT 368
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:06 +0000] "POST /api/v1/actions/execute HTTP/1.1" 200 465 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:12:10 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 330
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:13,968] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-3, requestId=a5e7991f-c971-40b7-9b70-0a81ddb501ac - Going to update resource with defaultActionId: 6570b5951fe0f33e39413a0a, branch: master
+READY
+RESULT 127
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:15.059 * 1 changes in 15 seconds. Saving...
+READY
+RESULT 130
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:15.060 * Background saving started by pid 1882
+READY
+RESULT 185
+processname:redis groupname:redis pid:1472 channel:stdout
+1882:C 07 Dec 2023 17:12:15.085 * DB saved on disk
+1882:C 07 Dec 2023 17:12:15.086 * RDB: 0 MB of memory used by copy-on-write
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:15.161 * Background saving terminated with success
+READY
+RESULT 413
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:17 +0000] "PUT /api/v1/actions/6570b5951fe0f33e39413a0a HTTP/1.1" 200 653 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit/api/6570b5951fe0f33e39413a0a?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 322
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:20,622] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-2, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: JGIT git_fetch, appId 6570b2a41fe0f33e394139fc, Time elapsed: 18177ms
+READY
+RESULT 320
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:21,663] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-4, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: JGIT git_reset, appId 6570b2a41fe0f33e394139fc, Time elapsed: 824ms
+READY
+RESULT 287
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:21,668] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-2, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - boundedElastic-2: Switching to the branch master
+READY
+RESULT 320
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:21,966] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-4, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: JGIT git_reset, appId 6570b2a41fe0f33e394139fc, Time elapsed: 257ms
+READY
+RESULT 294
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:22,697] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-4, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: FS application save, Time elapsed: 1890ms
+READY
+RESULT 387
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:22,742] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-2, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - boundedElastic-2: Get status for repo  /appsmith-stacks/git-storage/6570b0d11fe0f33e394139f2/6570b2a41fe0f33e394139fc/Campus_ClosetUI, branch master
+READY
+RESULT 320
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:24,644] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-4, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: JGIT git_reset, appId 6570b2a41fe0f33e394139fc, Time elapsed: 563ms
+READY
+RESULT 322
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:24,644] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-4, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: JGIT git_status, appId 6570b2a41fe0f33e394139fc, Time elapsed: 1941ms
+READY
+RESULT 321
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:25,031] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-1, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: JGIT git_reset, appId 6570b2a41fe0f33e394139fc, Time elapsed: 2306ms
+READY
+RESULT 287
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:25,033] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-4, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - boundedElastic-4: Switching to the branch master
+READY
+RESULT 383
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:25,809] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-6, requestId=c600e845-7294-488d-975c-1e82f70e4049 - [nioEventLoopGroup-3-6]Execute Action called in Page 6570b2b11fe0f33e39413a00, for action id : 6570b5951fe0f33e39413a0a  action name : Api1
+READY
+RESULT 358
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:25,813] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-6, requestId=c600e845-7294-488d-975c-1e82f70e4049 - This is a dry run or an embedded datasourceStorage. The datasourceStorage context would not exist in this scenario
+READY
+RESULT 298
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:25,903] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=nioEventLoopGroup-3-7, requestId=c600e845-7294-488d-975c-1e82f70e4049 - Datasource context doesn't exist. Creating connection.
+READY
+RESULT 315
+processname:backend groupname:backend pid:1478 channel:stdout
+org.springframework.web.reactive.function.client.WebClientRequestException: web: Name or service not known
+	at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+READY
+RESULT 10651
+processname:backend groupname:backend pid:1478 channel:stdout
+	Suppressed: The stacktrace has been enhanced by Reactor, refer to additional information below: 
+Error has been observed at the following site(s):
+	*__checkpoint ⇢ Request to POST http://web:4000/u/add/item [DefaultWebClient]
+Original Stack Trace:
+		at org.springframework.web.reactive.function.client.ExchangeFunctions$DefaultExchangeFunction.lambda$wrapException$9(ExchangeFunctions.java:136)
+		at reactor.core.publisher.MonoErrorSupplied.subscribe(MonoErrorSupplied.java:55)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxPeek$PeekSubscriber.onError(FluxPeek.java:222)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoNext$NextSubscriber.onError(MonoNext.java:93)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoFlatMapMany$FlatMapManyMain.onError(MonoFlatMapMany.java:204)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.SerializedSubscriber.onError(SerializedSubscriber.java:124)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.whenError(FluxRetryWhen.java:225)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenOtherSubscriber.onError(FluxRetryWhen.java:274)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onError(FluxContextWrite.java:121)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.maybeOnError(FluxConcatMapNoPrefetch.java:326)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.innerError(FluxConcatMapNoPrefetch.java:297)
+		at reactor.core.publisher.FluxConcatMap$ConcatMapInner.onError(FluxConcatMap.java:875)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.onNext(FluxConcatMapNoPrefetch.java:206)
+[2023-12-07 17:12:26,058] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=boundedElastic-1, requestId=3cc5fe68-4dea-4d1f-b2fa-d4c1e1252152 - Execute time: JGIT git_reset, appId 6570b2a41fe0f33e394139fc, Time elapsed: 1001ms
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onNext(MDCConfig.java:53)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.onNext(FluxContextWrite.java:107)
+		at reactor.core.publisher.SinkManyEmitterProcessor.drain(SinkManyEmitterProcessor.java:471)
+		at reactor.core.publisher.SinkManyEmitterProcessor$EmitterInner.drainParent(SinkManyEmitterProcessor.java:615)
+		at reactor.core.publisher.FluxPublish$PubSubInner.request(FluxPublish.java:603)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.FluxConcatMapNoPrefetch$FluxConcatMapNoPrefetchSubscriber.request(FluxConcatMapNoPrefetch.java:336)
+		at reactor.core.publisher.FluxContextWrite$ContextWriteSubscriber.request(FluxContextWrite.java:136)
+		at reactor.core.publisher.Operators$DeferredSubscription.request(Operators.java:1717)
+		at reactor.core.publisher.FluxRetryWhen$RetryWhenMainSubscriber.onError(FluxRetryWhen.java:192)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.http.client.HttpClientConnect$MonoHttpConnect$ClientTransportSubscriber.onError(HttpClientConnect.java:311)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$DisposableAcquire.onError(DefaultPooledConnectionProvider.java:162)
+		at reactor.netty.internal.shaded.reactor.pool.AbstractPool$Borrower.fail(AbstractPool.java:475)
+		at reactor.netty.internal.shaded.reactor.pool.SimpleDequePool.lambda$drainLoop$9(SimpleDequePool.java:433)
+		at reactor.core.publisher.FluxDoOnEach$DoOnEachSubscriber.onError(FluxDoOnEach.java:186)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoCreate$DefaultMonoSink.error(MonoCreate.java:201)
+		at reactor.netty.resources.DefaultPooledConnectionProvider$PooledConnectionAllocator$PooledConnectionInitializer.onError(DefaultPooledConnectionProvider.java:560)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondError(MonoFlatMap.java:241)
+		at reactor.core.publisher.MonoFlatMap$FlatMapInner.onError(MonoFlatMap.java:315)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:106)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.Mono.subscribe(Mono.java:4495)
+		at reactor.core.publisher.FluxOnErrorResume$ResumeSubscriber.onError(FluxOnErrorResume.java:103)
+		at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onError(MDCConfig.java:58)
+		at reactor.core.publisher.Operators.error(Operators.java:198)
+		at reactor.core.publisher.MonoError.subscribe(MonoError.java:53)
+		at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+		at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:165)
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise._subscribe(TransportConnector.java:638)
+		at reactor.netty.transport.TransportConnector$MonoChannelPromise.lambda$subscribe$0(TransportConnector.java:550)
+		at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+		at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+		at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+		at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:403)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.net.UnknownHostException: web: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:934)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1543)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:852)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1533)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1385)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at io.netty.util.internal.SocketUtils$9.run(SocketUtils.java:169)
+	at io.netty.util.internal.SocketUtils$9.run(SocketUtils.java:166)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:569)
+	at io.netty.util.internal.SocketUtils.allAddressesByName(SocketUtils.java:166)
+	at com.appsmith.util.WebClientUtils$NameResolver.doResolveAll(WebClientUtils.java:146)
+	at io.netty.resolver.SimpleNameResolver.resolveAll(SimpleNameResolver.java:79)
+	at io.netty.resolver.SimpleNameResolver.resolveAll(SimpleNameResolver.java:71)
+	at io.netty.resolver.InetSocketAddressResolver.doResolveAll(InetSocketAddressResolver.java:73)
+	at io.netty.resolver.InetSocketAddressResolver.doResolveAll(InetSocketAddressResolver.java:31)
+	at io.netty.resolver.AbstractAddressResolver.resolveAll(AbstractAddressResolver.java:158)
+	at reactor.netty.transport.TransportConnector.doResolveAndConnect(TransportConnector.java:335)
+	at reactor.netty.transport.TransportConnector.lambda$connect$6(TransportConnector.java:165)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.onNext(MonoFlatMap.java:132)
+	at reactor.netty.transport.TransportConnector$MonoChannelPromise._subscribe(TransportConnector.java:638)
+	at reactor.netty.transport.TransportConnector$MonoChannelPromise.lambda$subscribe$0(TransportConnector.java:550)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:174)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:167)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:403)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+[2023-12-07 17:12:26,068] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-3, requestId=c600e845-7294-488d-975c-1e82f70e4049 - reactor-http-epoll-3: Action Api1 with id 6570b5951fe0f33e39413a0a execution time : 258 ms
+READY
+RESULT 410
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:26 +0000] "GET /api/v1/git/status/app/6570b2a41fe0f33e394139fc?compareRemote=true HTTP/1.1" 200 346 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 397
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:26 +0000] "POST /api/v1/actions/execute HTTP/1.1" 200 479 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit/api/6570b5951fe0f33e39413a0a?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:12:27 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 127
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:31.091 * 1 changes in 15 seconds. Saving...
+READY
+RESULT 130
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:31.091 * Background saving started by pid 1900
+READY
+RESULT 109
+processname:redis groupname:redis pid:1472 channel:stdout
+1900:C 07 Dec 2023 17:12:31.101 * DB saved on disk
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1900:C 07 Dec 2023 17:12:31.102 * RDB: 0 MB of memory used by copy-on-write
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:31.192 * Background saving terminated with success
+READY
+RESULT 330
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:35,544] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-4, requestId=3f3b7f52-9b29-41a8-8278-5195385a2339 - Going to update resource with defaultActionId: 6570b2b11fe0f33e39413a04, branch: master
+READY
+RESULT 413
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:36 +0000] "PUT /api/v1/actions/6570b2b11fe0f33e39413a04 HTTP/1.1" 200 705 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit/api/6570b2b11fe0f33e39413a04?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 330
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:12:41,438] userEmail=jagj08@gmail.com, sessionId=9397df90-cab7-44fe-809e-fc590fa2dd0c, thread=reactor-http-epoll-1, requestId=9df23507-dcf6-428a-ba4f-d9c9e686f6ff - Going to update resource with defaultActionId: 6570b2b11fe0f33e39413a06, branch: master
+READY
+RESULT 413
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:12:42 +0000] "PUT /api/v1/actions/6570b2b11fe0f33e39413a06 HTTP/1.1" 200 683 "http://localhost:8080/app/campus-closetui/buyer-6570b2b11fe0f33e39413a00/edit/api/6570b2b11fe0f33e39413a06?branch=master" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:12:43 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 127
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:47.082 * 1 changes in 15 seconds. Saving...
+READY
+RESULT 130
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:47.083 * Background saving started by pid 1915
+READY
+RESULT 109
+processname:redis groupname:redis pid:1472 channel:stdout
+1915:C 07 Dec 2023 17:12:47.106 * DB saved on disk
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1915:C 07 Dec 2023 17:12:47.107 * RDB: 0 MB of memory used by copy-on-write
+READY
+RESULT 134
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:12:47.184 * Background saving terminated with success
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:12:58 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:13:13 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:13:29 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:13:44 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:13:59 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:14:15 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:14:30 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:14:45 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:15:00 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:15:16 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:15:31 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 285
+processname:editor groupname:editor pid:1479 channel:stdout
+192.168.65.1 - - [07/Dec/2023:17:15:43 +0000] "GET /rts/?EIO=4&transport=websocket HTTP/1.1" 101 597 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+READY
+RESULT 131
+processname:rts groupname:rts pid:1477 channel:stdout
+ns:/# socket 7PpElIN2cUZpl9AbAAAB left the room app:6570b2a41fe0f33e394139fc
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:15:46 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:16:01 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:16:17 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:16:32 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:16:47 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:17:02 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:17:18 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:17:33 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:17:48 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:18:03 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:18:19 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:18:34 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:18:50 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 147
+processname:editor groupname:editor pid:1479 channel:stdout
+127.0.0.1 - - [07/Dec/2023:17:19:05 +0000] "GET / HTTP/1.1" 200 6933 "-" "curl/7.68.0"
+READY
+RESULT 137
+processname:postgres groupname:postgres pid:1482 channel:stdout
+2023-12-07 17:19:14.696 UTC [1482] LOG:  received smart shutdown request
+READY
+RESULT 244
+processname:postgres groupname:postgres pid:1482 channel:stdout
+2023-12-07 17:19:14.797 UTC [1482] LOG:  background worker "logical replication launcher" (PID 1529) exited with exit code 1
+2023-12-07 17:19:14.801 UTC [1524] LOG:  shutting down
+READY
+RESULT 134
+processname:postgres groupname:postgres pid:1482 channel:stdout
+2023-12-07 17:19:15.049 UTC [1482] LOG:  database system is shut down
+READY
+RESULT 647
+processname:editor groupname:editor pid:1479 channel:stderr
+2023/12/07 17:19:15 [notice] 1479#1479: signal 3 (SIGQUIT) received from 1, shutting down
+2023/12/07 17:19:15 [notice] 1575#1575: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1575#1575: exiting
+2023/12/07 17:19:15 [notice] 1573#1573: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1573#1573: exiting
+2023/12/07 17:19:15 [notice] 1574#1574: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1574#1574: exiting
+2023/12/07 17:19:15 [notice] 1576#1576: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1576#1576: exiting
+2023/12/07 17:19:15 [notice] 1573#1573: exit
+READY
+RESULT 1073
+processname:editor groupname:editor pid:1479 channel:stderr
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1573
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1573 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: signal 29 (SIGIO) received
+2023/12/07 17:19:15 [notice] 1574#1574: exit
+2023/12/07 17:19:15 [notice] 1576#1576: exit
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1574
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1574 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: signal 29 (SIGIO) received
+2023/12/07 17:19:15 [notice] 1575#1575: exit
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1575
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1575 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: signal 29 (SIGIO) received
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1576
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1576 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: exit
+READY
+RESULT 161
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:19:15,114]  - Commencing graceful shutdown. Waiting for active requests to complete
+READY
+RESULT 118
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:19:15,134]  - Graceful shutdown complete
+READY
+RESULT 5240
+processname:backend groupname:backend pid:1478 channel:stdout
+[2023-12-07 17:19:15,503]  - Operator called default onErrorDropped
+reactor.core.Exceptions$ErrorCallbackNotImplemented: java.util.concurrent.CancellationException: Disconnected
+Caused by: java.util.concurrent.CancellationException: Disconnected
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.disconnectAction(FluxPublish.java:327)
+	at reactor.core.publisher.FluxPublish$PublishSubscriber.dispose(FluxPublish.java:318)
+	at org.springframework.data.redis.connection.lettuce.LettuceReactiveSubscription$State.terminate(LettuceReactiveSubscription.java:271)
+	at org.springframework.data.redis.connection.lettuce.LettuceReactiveSubscription.lambda$cancel$8(LettuceReactiveSubscription.java:149)
+	at reactor.core.publisher.MonoDefer.subscribe(MonoDefer.java:45)
+	at reactor.core.publisher.InternalMonoOperator.subscribe(InternalMonoOperator.java:64)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:240)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:203)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:209)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.subscribeNext(MonoIgnoreThen.java:238)
+	at reactor.core.publisher.MonoIgnoreThen$ThenIgnoreMain.onComplete(MonoIgnoreThen.java:203)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2205)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.MonoPeekTerminal$MonoTerminalPeekSubscriber.onComplete(MonoPeekTerminal.java:299)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.Operators$MultiSubscriptionSubscriber.onComplete(Operators.java:2205)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.MonoFlatMap$FlatMapMain.secondComplete(MonoFlatMap.java:250)
+	at reactor.core.publisher.MonoFlatMap$FlatMapInner.onComplete(MonoFlatMap.java:324)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at reactor.core.publisher.MonoIgnoreElements$IgnoreElementsSubscriber.onComplete(MonoIgnoreElements.java:89)
+	at com.appsmith.server.configurations.MDCConfig$MdcContextLifter.onComplete(MDCConfig.java:63)
+	at io.lettuce.core.RedisPublisher$ImmediateSubscriber.onComplete(RedisPublisher.java:900)
+	at io.lettuce.core.RedisPublisher$State.onAllDataRead(RedisPublisher.java:702)
+	at io.lettuce.core.RedisPublisher$State$3.read(RedisPublisher.java:612)
+	at io.lettuce.core.RedisPublisher$State$3.onDataAvailable(RedisPublisher.java:569)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onDataAvailable(RedisPublisher.java:326)
+	at io.lettuce.core.RedisPublisher$RedisSubscription.onAllDataRead(RedisPublisher.java:341)
+	at io.lettuce.core.RedisPublisher$SubscriptionCommand.doOnComplete(RedisPublisher.java:782)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:65)
+	at io.lettuce.core.protocol.CommandWrapper.complete(CommandWrapper.java:63)
+	at io.lettuce.core.protocol.CommandHandler.complete(CommandHandler.java:747)
+	at io.lettuce.core.pubsub.PubSubCommandHandler.complete(PubSubCommandHandler.java:167)
+	at io.lettuce.core.protocol.CommandHandler.decode(CommandHandler.java:682)
+	at io.lettuce.core.pubsub.PubSubCommandHandler.decode(PubSubCommandHandler.java:112)
+	at io.lettuce.core.protocol.CommandHandler.channelRead(CommandHandler.java:599)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:442)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:412)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelRead(DefaultChannelPipeline.java:1410)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:440)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:420)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRead(DefaultChannelPipeline.java:919)
+	at io.netty.channel.epoll.AbstractEpollStreamChannel$EpollStreamUnsafe.epollInReady(AbstractEpollStreamChannel.java:800)
+	at io.netty.channel.epoll.EpollEventLoop.processReady(EpollEventLoop.java:499)
+	at io.netty.channel.epoll.EpollEventLoop.run(EpollEventLoop.java:397)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+READY
+RESULT 131
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:signal-handler (1701969563) Received SIGTERM scheduling shutdown...
+READY
+RESULT 199
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:19:23.769 # User requested shutdown...
+1472:M 07 Dec 2023 17:19:23.769 * Saving the final RDB snapshot before exiting.
+READY
+RESULT 182
+processname:redis groupname:redis pid:1472 channel:stdout
+1472:M 07 Dec 2023 17:19:23.780 * DB saved on disk
+1472:M 07 Dec 2023 17:19:23.780 # Redis is now ready to exit, bye bye...
+READY

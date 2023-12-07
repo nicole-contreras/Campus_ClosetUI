@@ -185,3 +185,66 @@
 2023/12/07 17:09:08 [notice] 1484#1484: signal 17 (SIGCHLD) received from 1560
 2023/12/07 17:09:08 [notice] 1484#1484: worker process 1560 exited with code 0
 2023/12/07 17:09:08 [notice] 1484#1484: exit
++ ssl_conf_path=/appsmith-stacks/data/certificate/conf
++ mkdir -pv /appsmith-stacks/data/certificate/conf
++ cat
++ cat
++ [[ -z 'self' * ]]
++ export 'APPSMITH_ALLOWED_FRAME_ANCESTORS='\''self'\'' *'
++ APPSMITH_ALLOWED_FRAME_ANCESTORS=''\''self'\'' *'
++ [[ -z false ]]
++ use_https=0
++ [[ -n '' ]]
++ /opt/appsmith/templates/nginx-app.conf.sh 0 ''
++ cp -r /opt/appsmith/editor/404-image.png /opt/appsmith/editor/404.css /opt/appsmith/editor/404.html /opt/appsmith/editor/asset-manifest.json /opt/appsmith/editor/asset-manifest.json.gz /opt/appsmith/editor/favicon-black.ico /opt/appsmith/editor/index.html /opt/appsmith/editor/index.html.gz /opt/appsmith/editor/libraries /opt/appsmith/editor/manifest.json /opt/appsmith/editor/page.min.js /opt/appsmith/editor/pageService.js /opt/appsmith/editor/pageService.js.LICENSE.txt /opt/appsmith/editor/pageService.js.br /opt/appsmith/editor/pageService.js.gz /opt/appsmith/editor/pageService.js.map /opt/appsmith/editor/pageService.js.map.gz /opt/appsmith/editor/privacy-policy.html /opt/appsmith/editor/static /opt/appsmith/editor/terms-and-conditions.html /opt/appsmith/editor/tinymce /tmp/appsmith/www
++ apply-env-vars /opt/appsmith/editor/index.html /tmp/appsmith/www/index.html
++ original=/opt/appsmith/editor/index.html
++ served=/tmp/appsmith/www/index.html
++ node -e '
+  const fs = require("fs")
+  const content = fs.readFileSync("/opt/appsmith/editor/index.html", "utf8").replace(
+    /\b__(APPSMITH_[A-Z0-9_]+)__\b/g,
+    (placeholder, name) => (process.env[name] || "")
+  )
+  fs.writeFileSync("/tmp/appsmith/www/index.html", content)
+  '
+++ dirname /tmp/appsmith/www/index.html
++ pushd /tmp/appsmith/www
+++ basename /tmp/appsmith/www/index.html
++ gzip --keep --force index.html
++ popd
++ exec nginx -g 'daemon off;error_log stderr info;'
+2023/12/07 17:10:33 [notice] 1479#1479: using the "epoll" event method
+2023/12/07 17:10:33 [notice] 1479#1479: nginx/1.18.0 (Ubuntu)
+2023/12/07 17:10:33 [notice] 1479#1479: OS: Linux 6.5.11-linuxkit
+2023/12/07 17:10:33 [notice] 1479#1479: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2023/12/07 17:10:33 [notice] 1479#1479: start worker processes
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1573
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1574
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1575
+2023/12/07 17:10:33 [notice] 1479#1479: start worker process 1576
+2023/12/07 17:19:15 [notice] 1479#1479: signal 3 (SIGQUIT) received from 1, shutting down
+2023/12/07 17:19:15 [notice] 1575#1575: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1575#1575: exiting
+2023/12/07 17:19:15 [notice] 1573#1573: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1573#1573: exiting
+2023/12/07 17:19:15 [notice] 1574#1574: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1574#1574: exiting
+2023/12/07 17:19:15 [notice] 1576#1576: gracefully shutting down
+2023/12/07 17:19:15 [notice] 1576#1576: exiting
+2023/12/07 17:19:15 [notice] 1573#1573: exit
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1573
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1573 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: signal 29 (SIGIO) received
+2023/12/07 17:19:15 [notice] 1574#1574: exit
+2023/12/07 17:19:15 [notice] 1576#1576: exit
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1574
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1574 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: signal 29 (SIGIO) received
+2023/12/07 17:19:15 [notice] 1575#1575: exit
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1575
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1575 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: signal 29 (SIGIO) received
+2023/12/07 17:19:15 [notice] 1479#1479: signal 17 (SIGCHLD) received from 1576
+2023/12/07 17:19:15 [notice] 1479#1479: worker process 1576 exited with code 0
+2023/12/07 17:19:15 [notice] 1479#1479: exit

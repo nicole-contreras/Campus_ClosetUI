@@ -28,6 +28,14 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Seller_get_conversation",
+              "name": "get_conversation",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Seller_show_items",
               "name": "show_items",
               "confirmBeforeExecute": false,
